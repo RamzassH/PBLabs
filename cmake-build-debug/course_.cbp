@@ -170,6 +170,18 @@
 		<Unit filename="Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/vector/test/vector_test.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/vector/test/vector_test.h">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/vector/vector.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/vector/vector.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="Z:/course_/main.c">
 			<Option target="course_"/>
 		</Unit>

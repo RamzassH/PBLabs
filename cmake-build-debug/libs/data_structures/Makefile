@@ -201,6 +201,54 @@ unordered_array_set/unordered_array_set.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.s
 .PHONY : unordered_array_set/unordered_array_set.c.s
 
+vector/test/vector_test.obj: vector/test/vector_test.c.obj
+.PHONY : vector/test/vector_test.obj
+
+# target to build an object file
+vector/test/vector_test.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj
+.PHONY : vector/test/vector_test.c.obj
+
+vector/test/vector_test.i: vector/test/vector_test.c.i
+.PHONY : vector/test/vector_test.i
+
+# target to preprocess a source file
+vector/test/vector_test.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.i
+.PHONY : vector/test/vector_test.c.i
+
+vector/test/vector_test.s: vector/test/vector_test.c.s
+.PHONY : vector/test/vector_test.s
+
+# target to generate assembly for a file
+vector/test/vector_test.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.s
+.PHONY : vector/test/vector_test.c.s
+
+vector/vector.obj: vector/vector.c.obj
+.PHONY : vector/vector.obj
+
+# target to build an object file
+vector/vector.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj
+.PHONY : vector/vector.c.obj
+
+vector/vector.i: vector/vector.c.i
+.PHONY : vector/vector.i
+
+# target to preprocess a source file
+vector/vector.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.i
+.PHONY : vector/vector.c.i
+
+vector/vector.s: vector/vector.c.s
+.PHONY : vector/vector.s
+
+# target to generate assembly for a file
+vector/vector.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.s
+.PHONY : vector/vector.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -219,6 +267,12 @@ help:
 	@echo ... unordered_array_set/unordered_array_set.obj
 	@echo ... unordered_array_set/unordered_array_set.i
 	@echo ... unordered_array_set/unordered_array_set.s
+	@echo ... vector/test/vector_test.obj
+	@echo ... vector/test/vector_test.i
+	@echo ... vector/test/vector_test.s
+	@echo ... vector/vector.obj
+	@echo ... vector/vector.i
+	@echo ... vector/vector.s
 .PHONY : help
 
 

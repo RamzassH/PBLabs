@@ -6,3 +6,25 @@
 
 #IncludeRegexTransform: 
 
+Z:/course_/libs/data_structures/vector/test/vector_test.h
+assert.h
+-
+../vector.h
+Z:/course_/libs/data_structures/vector/vector.h
+
+Z:/course_/libs/data_structures/vector/vector.h
+stdio.h
+-
+stdlib.h
+-
+malloc.h
+-
+stdbool.h
+-
+
+Z:/course_/main.c
+stdio.h
+-
+libs/data_structures/vector/test/vector_test.h
+Z:/course_/libs/data_structures/vector/test/vector_test.h
+

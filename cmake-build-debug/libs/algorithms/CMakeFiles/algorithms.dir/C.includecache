@@ -6,17 +6,3 @@
 
 #IncludeRegexTransform: 
 
-Z:/course_/libs/algorithms/array/array.c
-stdio.h
--
-limits.h
--
-assert.h
--
-array.h
-Z:/course_/libs/algorithms/array/array.h
-
-Z:/course_/libs/algorithms/array/array.h
-stddef.h
--
-

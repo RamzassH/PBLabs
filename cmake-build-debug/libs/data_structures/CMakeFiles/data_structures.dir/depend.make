@@ -12,3 +12,10 @@ libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordere
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/unordered_array_set/unordered_array_set.c \
  ../libs/data_structures/unordered_array_set/unordered_array_set.h
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj: \
+ ../libs/data_structures/vector/test/vector_test.c \
+ ../libs/data_structures/vector/test/vector_test.h \
+ ../libs/data_structures/vector/vector.h
+libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj: \
+ ../libs/data_structures/vector/vector.c \
+ ../libs/data_structures/vector/vector.h

@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "Z:/course_/libs/data_structures/bitset/bitset.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
   "Z:/course_/libs/data_structures/ordered_array_set/ordered_array_set.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj"
   "Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj"
+  "Z:/course_/libs/data_structures/vector/test/vector_test.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj"
+  "Z:/course_/libs/data_structures/vector/vector.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
