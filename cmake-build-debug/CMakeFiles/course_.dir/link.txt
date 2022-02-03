@@ -1,0 +1,3 @@
+"Z:\CLionJetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\course_.dir/objects.a
+Z:\CLionJetBrains\mingw64\bin\ar.exe cr CMakeFiles\course_.dir/objects.a @CMakeFiles\course_.dir\objects1.rsp
+Z:\CLionJetBrains\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\course_.dir/objects.a -Wl,--no-whole-archive -o course_.exe -Wl,--out-implib,libcourse_.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\course_.dir\linklibs.rsp

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="course_"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="Z:/course_/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="Z:/course_/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="course_">
+				<Option output="Z:/course_/cmake-build-debug/course_.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 course_"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="course_/fast">
+				<Option output="Z:/course_/cmake-build-debug/course_.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 course_/fast"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="Z:/course_/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_structures">
+				<Option output="Z:/course_/cmake-build-debug/libs/data_structures/libdata_structures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug/libs/data_structures"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 data_structures"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="data_structures/fast">
+				<Option output="Z:/course_/cmake-build-debug/libs/data_structures/libdata_structures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug/libs/data_structures"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 data_structures/fast"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="algorithms">
+				<Option output="Z:/course_/cmake-build-debug/libs/algorithms/libalgorithms.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug/libs/algorithms"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 algorithms"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="algorithms/fast">
+				<Option output="Z:/course_/cmake-build-debug/libs/algorithms/libalgorithms.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug/libs/algorithms"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 algorithms/fast"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="Z:/course_/libs/algorithms/array/array.c">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/algorithms/array/array.h">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/bitset/bitset.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/bitset/bitset.h">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/ordered_array_set/ordered_array_set.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/ordered_array_set/ordered_array_set.h">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.h">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/main.c">
+			<Option target="course_"/>
+		</Unit>
+		<Unit filename="Z:/course_/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\data_structures\"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/algorithms/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\algorithms\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
