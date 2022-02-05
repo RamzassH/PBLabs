@@ -311,6 +311,129 @@ void test_vector_pop_back() {
     test_vector_pop_back_zero_vector();
 }
 
+void test_at_vector_empty_vector() {
+    vector_t v = create_vector(2);
+    push_back(&v, 2);
+    push_back(&v, 3);
+
+    int *index = at_vector(&v, 0);
+    assert(*index == 2);
+
+    index = at_vector(&v, 1);
+    assert(*index == 3);
+
+    delete_vector(&v);
+}
+
+void test_at_vector_zero_vector() {
+    vector_t v = create_vector(0);
+    push_back(&v, 2);
+
+    int *index = at_vector(&v, 0);
+    assert(*index == 2);
+
+    delete_vector(&v);
+}
+
+void test_at_vector_request_to_last_element() {
+    vector_t v = create_vector(3);
+    push_back(&v, 1);
+    push_back(&v, 2);
+    push_back(&v, 3);
+
+    int *index = at_vector(&v, 2);
+
+    assert(*index == 3);
+
+    delete_vector(&v);
+}
+
+void test_at_vector() {
+    test_at_vector_empty_vector();
+    test_at_vector_zero_vector();
+    test_at_vector_request_to_last_element();
+}
+
+void test_back_non_empty_vector() {
+    vector_t v = create_vector(1);
+
+    push_back(&v, 2);
+
+    assert(*back(&v) == 2);
+
+    delete_vector(&v);
+}
+
+void test_back_zero_vector() {
+    vector_t v = create_vector(0);
+
+    push_back(&v, 1);
+
+    assert(*back(&v) == 1);
+
+    delete_vector(&v);
+}
+
+void test_back_full_vector() {
+    vector_t v = create_vector(5);
+
+    push_back(&v, 1);
+    push_back(&v, 2);
+    push_back(&v, 3);
+    push_back(&v, 4);
+    push_back(&v, 5);
+
+    assert(*back(&v) == 5);
+
+    delete_vector(&v);
+}
+
+void test_back() {
+    test_back_non_empty_vector();
+    test_back_zero_vector();
+    test_back_full_vector();
+}
+
+void test_front_one_element_in_vector() {
+    vector_t v = create_vector(1);
+
+    push_back(&v, 2);
+
+    assert(*front(&v) == *(v).data);
+
+    delete_vector(&v);
+}
+
+void test_front_zero_vector() {
+    vector_t v = create_vector(0);
+
+    push_back(&v, 1);
+
+    assert(*front(&v) == 1);
+
+    delete_vector(&v);
+}
+
+void test_front_full_vector() {
+    vector_t v = create_vector(5);
+
+    push_back(&v, 1);
+    push_back(&v, 2);
+    push_back(&v, 3);
+    push_back(&v, 4);
+    push_back(&v, 5);
+
+    assert(*front(&v) == 1);
+
+    delete_vector(&v);
+}
+
+void test_forward() {
+    test_front_one_element_in_vector();
+    test_front_zero_vector();
+    test_front_full_vector();
+}
+
 void vector_test() {
     test_create_vector();
     test_reserve();
@@ -320,4 +443,7 @@ void vector_test() {
     test_is_full();
     test_vector_push_back();
     test_vector_pop_back();
+    test_at_vector();
+    test_back();
+    test_forward();
 }
