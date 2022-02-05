@@ -1,10 +1,10 @@
 #include "vector.h"
 
-void check_malloc(int *data,
-                  const size_t maxMemorySize) {
+void check_malloc(int *data, const size_t maxMemorySize) {
     if (_msize(data) != maxMemorySize) {
         printf("\a");
         fprintf(stderr, "bad alloc");
+
         exit(1);
     }
 }
@@ -32,6 +32,7 @@ void reserve(vector_t *v, const size_t newCapacity) {
     if (newCapacity > 0) {
         size_t needMemorySize = newCapacity * sizeof(int);
         (v)->data = (int *) realloc((v)->data, needMemorySize);
+
         check_malloc((v)->data, needMemorySize);
     } else {
         (v)->data = NULL;
@@ -62,11 +63,11 @@ bool is_full(vector_t *v) {
     return (v)->size == (v)->capacity;
 }
 
-int get_vector_value(vector_t *v, size_t i) {
+int get_vector_value(vector_t *v, const size_t i) {
     return (v)->data[i];
 }
 
-void push_back(vector_t *v, int x) {
+void push_back(vector_t *v, const int x) {
     if (is_full(v) && !is_zero_vector(v)) {
         size_t newCapacity = (v)->capacity * 2;
         reserve(v, newCapacity);
@@ -75,56 +76,52 @@ void push_back(vector_t *v, int x) {
     }
 
     ((v)->data[(v)->size]) = x;
-    (v)->size ++;
+    (v)->size++;
 }
 
 void pop_back(vector_t *v) {
     if (is_empty(v)) {
         printf("\a");
         fprintf(stderr, "vector is empty");
+
         exit(1);
     }
 
     (v)->size--;
 }
 
-int *at_vector(vector_t *v, size_t index) {
-    if (index >= 0 && index <= (v)->size - 1) {
+bool is_element_in_vector(const vector_t *v, const size_t checkElementIndex) {
+    return (checkElementIndex >= 0 && checkElementIndex <= (v)->size - 1);
+}
+
+int *at_vector(vector_t *v, const size_t index) {
+    if (is_element_in_vector(v, index)) {
         return &((v)->data[index]);
     }
 
     printf("\a");
     fprintf(stderr, "IndexError: a[%llu] is not exists", index);
+
     exit(604);
 }
 
 int *back(vector_t *v) {
-    if (is_zero_vector(v)) {
+    if (is_zero_vector(v) || is_empty(v)) {
         printf("\a");
-        fprintf(stderr, "IndexError: vector is zero vector");
-        exit(604);
-    }
-    else if (is_empty(v)) {
-        printf("\a");
-        fprintf(stderr, "IndexError: vector is empty");
-        exit(604);
+        fprintf(stderr, "IndexError: vector is zero vector or vector is empty");
 
+        exit(604);
     }
 
     return &((v)->data[(v)->size - 1]);
 }
 
 int* front(vector_t *v) {
-    if (is_zero_vector(v)) {
+    if (is_zero_vector(v) || is_empty(v)) {
         printf("\a");
-        fprintf(stderr, "IndexError: vector is zero vector");
-        exit(604);
-    }
-    else if (is_empty(v)) {
-        printf("\a");
-        fprintf(stderr, "IndexError: vector is empty");
-        exit(604);
+        fprintf(stderr, "IndexError: vector is zero vector or vector is empty");
 
+        exit(604);
     }
 
     return (v)->data;
