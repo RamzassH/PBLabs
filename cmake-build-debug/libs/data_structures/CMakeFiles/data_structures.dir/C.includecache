@@ -6,11 +6,23 @@
 
 #IncludeRegexTransform: 
 
-Z:/course_/libs/data_structures/vector/vector.c
-vector.h
-Z:/course_/libs/data_structures/vector/vector.h
+Z:/course_/libs/data_structures/vector/test/vector_test.c
+vector_test.h
+Z:/course_/libs/data_structures/vector/test/vector_test.h
+assert.h
+-
 
-Z:/course_/libs/data_structures/vector/vector.h
+Z:/course_/libs/data_structures/vector/test/vector_test.h
+assert.h
+-
+../vector_t/vector.h
+Z:/course_/libs/data_structures/vector/vector_t/vector.h
+
+Z:/course_/libs/data_structures/vector/vector_t/vector.c
+vector.h
+Z:/course_/libs/data_structures/vector/vector_t/vector.h
+
+Z:/course_/libs/data_structures/vector/vector_t/vector.h
 stdio.h
 -
 stdlib.h

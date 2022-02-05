@@ -9,10 +9,10 @@
 Z:/course_/libs/data_structures/vector/test/vector_test.h
 assert.h
 -
-../vector.h
-Z:/course_/libs/data_structures/vector/vector.h
+../vector_t/vector.h
+Z:/course_/libs/data_structures/vector/vector_t/vector.h
 
-Z:/course_/libs/data_structures/vector/vector.h
+Z:/course_/libs/data_structures/vector/vector_t/vector.h
 stdio.h
 -
 stdlib.h

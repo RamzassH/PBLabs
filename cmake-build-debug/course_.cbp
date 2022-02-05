@@ -176,11 +176,20 @@
 		<Unit filename="Z:/course_/libs/data_structures/vector/test/vector_test.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="Z:/course_/libs/data_structures/vector/vector.c">
+		<Unit filename="Z:/course_/libs/data_structures/vector/vector_t/vector.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="Z:/course_/libs/data_structures/vector/vector.h">
+		<Unit filename="Z:/course_/libs/data_structures/vector/vector_t/vector.h">
 			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/vector/vector_void/vector_void.c">
+			<Option target="course_"/>
+			<Option target="data_structures"/>
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/vector/vector_void/vector_void.h">
+			<Option target="course_"/>
+			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/main.c">
 			<Option target="course_"/>

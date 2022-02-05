@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "Z:/course_/libs/data_structures/vector/vector_void/vector_void.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/vector/vector_void/vector_void.c.obj"
   "Z:/course_/main.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

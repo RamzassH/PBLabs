@@ -225,29 +225,53 @@ vector/test/vector_test.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.s
 .PHONY : vector/test/vector_test.c.s
 
-vector/vector.obj: vector/vector.c.obj
-.PHONY : vector/vector.obj
+vector/vector_t/vector.obj: vector/vector_t/vector.c.obj
+.PHONY : vector/vector_t/vector.obj
 
 # target to build an object file
-vector/vector.c.obj:
-	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj
-.PHONY : vector/vector.c.obj
+vector/vector_t/vector.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj
+.PHONY : vector/vector_t/vector.c.obj
 
-vector/vector.i: vector/vector.c.i
-.PHONY : vector/vector.i
+vector/vector_t/vector.i: vector/vector_t/vector.c.i
+.PHONY : vector/vector_t/vector.i
 
 # target to preprocess a source file
-vector/vector.c.i:
-	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.i
-.PHONY : vector/vector.c.i
+vector/vector_t/vector.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.i
+.PHONY : vector/vector_t/vector.c.i
 
-vector/vector.s: vector/vector.c.s
-.PHONY : vector/vector.s
+vector/vector_t/vector.s: vector/vector_t/vector.c.s
+.PHONY : vector/vector_t/vector.s
 
 # target to generate assembly for a file
-vector/vector.c.s:
-	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.s
-.PHONY : vector/vector.c.s
+vector/vector_t/vector.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.s
+.PHONY : vector/vector_t/vector.c.s
+
+vector/vector_void/vector_void.obj: vector/vector_void/vector_void.c.obj
+.PHONY : vector/vector_void/vector_void.obj
+
+# target to build an object file
+vector/vector_void/vector_void.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj
+.PHONY : vector/vector_void/vector_void.c.obj
+
+vector/vector_void/vector_void.i: vector/vector_void/vector_void.c.i
+.PHONY : vector/vector_void/vector_void.i
+
+# target to preprocess a source file
+vector/vector_void/vector_void.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.i
+.PHONY : vector/vector_void/vector_void.c.i
+
+vector/vector_void/vector_void.s: vector/vector_void/vector_void.c.s
+.PHONY : vector/vector_void/vector_void.s
+
+# target to generate assembly for a file
+vector/vector_void/vector_void.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.s
+.PHONY : vector/vector_void/vector_void.c.s
 
 # Help Target
 help:
@@ -270,9 +294,12 @@ help:
 	@echo ... vector/test/vector_test.obj
 	@echo ... vector/test/vector_test.i
 	@echo ... vector/test/vector_test.s
-	@echo ... vector/vector.obj
-	@echo ... vector/vector.i
-	@echo ... vector/vector.s
+	@echo ... vector/vector_t/vector.obj
+	@echo ... vector/vector_t/vector.i
+	@echo ... vector/vector_t/vector.s
+	@echo ... vector/vector_void/vector_void.obj
+	@echo ... vector/vector_void/vector_void.i
+	@echo ... vector/vector_void/vector_void.s
 .PHONY : help
 
 

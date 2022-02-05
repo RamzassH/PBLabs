@@ -3,5 +3,5 @@
 
 CMakeFiles/course_.dir/main.c.obj: \
  ../libs/data_structures/vector/test/vector_test.h \
- ../libs/data_structures/vector/vector.h \
+ ../libs/data_structures/vector/vector_t/vector.h \
  ../main.c

@@ -2,7 +2,7 @@
 #define COURSE_VECTOR_TEST_H
 
 #include <assert.h>
-#include "../vector.h"
+#include "../vector_t/vector.h"
 
 /*
  * Тест проверяет, может ли пользователь создать нулевой вектор
