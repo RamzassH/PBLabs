@@ -129,6 +129,30 @@ algorithms/fast:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+__/data_structures/vector/test_vector_void/test_vector_void.obj: __/data_structures/vector/test_vector_void/test_vector_void.c.obj
+.PHONY : __/data_structures/vector/test_vector_void/test_vector_void.obj
+
+# target to build an object file
+__/data_structures/vector/test_vector_void/test_vector_void.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.obj
+.PHONY : __/data_structures/vector/test_vector_void/test_vector_void.c.obj
+
+__/data_structures/vector/test_vector_void/test_vector_void.i: __/data_structures/vector/test_vector_void/test_vector_void.c.i
+.PHONY : __/data_structures/vector/test_vector_void/test_vector_void.i
+
+# target to preprocess a source file
+__/data_structures/vector/test_vector_void/test_vector_void.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.i
+.PHONY : __/data_structures/vector/test_vector_void/test_vector_void.c.i
+
+__/data_structures/vector/test_vector_void/test_vector_void.s: __/data_structures/vector/test_vector_void/test_vector_void.c.s
+.PHONY : __/data_structures/vector/test_vector_void/test_vector_void.s
+
+# target to generate assembly for a file
+__/data_structures/vector/test_vector_void/test_vector_void.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.s
+.PHONY : __/data_structures/vector/test_vector_void/test_vector_void.c.s
+
 __/data_structures/vector/vector_void/vector_void.obj: __/data_structures/vector/vector_void/vector_void.c.obj
 .PHONY : __/data_structures/vector/vector_void/vector_void.obj
 
@@ -186,6 +210,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... algorithms
+	@echo ... __/data_structures/vector/test_vector_void/test_vector_void.obj
+	@echo ... __/data_structures/vector/test_vector_void/test_vector_void.i
+	@echo ... __/data_structures/vector/test_vector_void/test_vector_void.s
 	@echo ... __/data_structures/vector/vector_void/vector_void.obj
 	@echo ... __/data_structures/vector/vector_void/vector_void.i
 	@echo ... __/data_structures/vector/vector_void/vector_void.s

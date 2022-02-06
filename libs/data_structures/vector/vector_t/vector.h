@@ -12,6 +12,8 @@ typedef struct {
     size_t capacity;      /*вместимость вектора*/
 }vector_t;
 
+void check_malloc(void *data, size_t maxMemorySize);
+
 /*
  * Выделяет нужное количество памяти для хранения вектора размером needCapacity.
  */

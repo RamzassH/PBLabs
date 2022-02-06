@@ -117,18 +117,18 @@ libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/vector/vector_t/vector.c.s"
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\vector\vector_t\vector.c -o CMakeFiles\data_structures.dir\vector\vector_t\vector.c.s
 
-libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj: libs/data_structures/CMakeFiles/data_structures.dir/flags.make
-libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj: ../libs/data_structures/vector/test/vector_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj"
-	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\data_structures.dir\vector\test\vector_test.c.obj -c Z:\course_\libs\data_structures\vector\test\vector_test.c
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj: libs/data_structures/CMakeFiles/data_structures.dir/flags.make
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj: ../libs/data_structures/vector/test_vector/vector_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\data_structures.dir\vector\test_vector\vector_test.c.obj -c Z:\course_\libs\data_structures\vector\test_vector\vector_test.c
 
-libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/vector/test/vector_test.c.i"
-	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\data_structures\vector\test\vector_test.c > CMakeFiles\data_structures.dir\vector\test\vector_test.c.i
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.i"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\data_structures\vector\test_vector\vector_test.c > CMakeFiles\data_structures.dir\vector\test_vector\vector_test.c.i
 
-libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/vector/test/vector_test.c.s"
-	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\vector\test\vector_test.c -o CMakeFiles\data_structures.dir\vector\test\vector_test.c.s
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.s"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\vector\test_vector\vector_test.c -o CMakeFiles\data_structures.dir\vector\test_vector\vector_test.c.s
 
 libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj: libs/data_structures/CMakeFiles/data_structures.dir/flags.make
 libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj: ../libs/data_structures/vector/vector_void/vector_void.c
@@ -143,14 +143,28 @@ libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_vo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.s"
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\vector\vector_void\vector_void.c -o CMakeFiles\data_structures.dir\vector\vector_void\vector_void.c.s
 
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj: libs/data_structures/CMakeFiles/data_structures.dir/flags.make
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj: ../libs/data_structures/vector/test_vector_void/test_vector_void.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\data_structures.dir\vector\test_vector_void\test_vector_void.c.obj -c Z:\course_\libs\data_structures\vector\test_vector_void\test_vector_void.c
+
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.i"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\data_structures\vector\test_vector_void\test_vector_void.c > CMakeFiles\data_structures.dir\vector\test_vector_void\test_vector_void.c.i
+
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.s"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\vector\test_vector_void\test_vector_void.c -o CMakeFiles\data_structures.dir\vector\test_vector_void\test_vector_void.c.s
+
 # Object files for target data_structures
 data_structures_OBJECTS = \
 "CMakeFiles/data_structures.dir/bitset/bitset.c.obj" \
 "CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj" \
 "CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj" \
 "CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj" \
-"CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj" \
-"CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj"
+"CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj" \
+"CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj" \
+"CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj"
 
 # External object files for target data_structures
 data_structures_EXTERNAL_OBJECTS =
@@ -159,11 +173,12 @@ libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj
-libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj
+libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj
+libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/build.make
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libdata_structures.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library libdata_structures.a"
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && $(CMAKE_COMMAND) -P CMakeFiles\data_structures.dir\cmake_clean_target.cmake
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\data_structures.dir\link.txt --verbose=$(VERBOSE)
 

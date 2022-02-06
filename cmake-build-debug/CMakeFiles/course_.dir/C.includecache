@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-Z:/course_/libs/data_structures/vector/test/vector_test.h
+Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.c
+test_vector_void.h
+Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h
+
+Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h
+../vector_void/vector_void.h
+Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
 assert.h
 -
-../vector_t/vector.h
-Z:/course_/libs/data_structures/vector/vector_t/vector.h
 
 Z:/course_/libs/data_structures/vector/vector_t/vector.h
 stdio.h
@@ -22,9 +26,7 @@ malloc.h
 stdbool.h
 -
 
-Z:/course_/main.c
-stdio.h
--
-libs/data_structures/vector/test/vector_test.h
-Z:/course_/libs/data_structures/vector/test/vector_test.h
+Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
+../vector_t/vector.h
+Z:/course_/libs/data_structures/vector/vector_t/vector.h
 

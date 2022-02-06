@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.c" "Z:/course_/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.obj"
   "Z:/course_/libs/data_structures/vector/vector_void/vector_void.c" "Z:/course_/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/vector_void/vector_void.c.obj"
   "Z:/course_/libs/algorithms/array/array.c" "Z:/course_/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj"
   )

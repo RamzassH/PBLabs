@@ -12,10 +12,19 @@ libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordere
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/unordered_array_set/unordered_array_set.c \
  ../libs/data_structures/unordered_array_set/unordered_array_set.h
-libs/data_structures/CMakeFiles/data_structures.dir/vector/test/vector_test.c.obj: \
- ../libs/data_structures/vector/test/vector_test.c \
- ../libs/data_structures/vector/test/vector_test.h \
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj: \
+ ../libs/data_structures/vector/test_vector/vector_test.c \
+ ../libs/data_structures/vector/test_vector/vector_test.h \
  ../libs/data_structures/vector/vector_t/vector.h
+libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj: \
+ ../libs/data_structures/vector/test_vector_void/test_vector_void.c \
+ ../libs/data_structures/vector/test_vector_void/test_vector_void.h \
+ ../libs/data_structures/vector/vector_t/vector.h \
+ ../libs/data_structures/vector/vector_void/vector_void.h
 libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj: \
  ../libs/data_structures/vector/vector_t/vector.c \
  ../libs/data_structures/vector/vector_t/vector.h
+libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_void/vector_void.c.obj: \
+ ../libs/data_structures/vector/vector_t/vector.h \
+ ../libs/data_structures/vector/vector_void/vector_void.c \
+ ../libs/data_structures/vector/vector_void/vector_void.h

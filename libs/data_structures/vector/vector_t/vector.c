@@ -1,6 +1,6 @@
 #include "vector.h"
 
-void check_malloc(int *data, const size_t maxMemorySize) {
+void check_malloc(void *data, const size_t maxMemorySize) {
     if (_msize(data) != maxMemorySize) {
         printf("\a");
         fprintf(stderr, "bad alloc");

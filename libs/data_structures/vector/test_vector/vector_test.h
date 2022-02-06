@@ -71,7 +71,7 @@ void test_shrink_to_fit_non_full_vector();
 void test_shrink_to_fit_empty_vector();
 
 /*
- * Тест проверяет, можно ля подрезать полный вектор
+ * Тест проверяет, можно ли подрезать полный вектор
  */
 void test_shrink_to_fit_full_vector();
 
