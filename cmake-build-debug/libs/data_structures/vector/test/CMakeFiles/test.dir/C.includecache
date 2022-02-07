@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+Z:/course_/libs/data_structures/vector/test/vector_test.c
+vector_test.h
+Z:/course_/libs/data_structures/vector/test/vector_test.h
+assert.h
+-
+
+Z:/course_/libs/data_structures/vector/test/vector_test.h
+assert.h
+-
+../vector.h
+Z:/course_/libs/data_structures/vector/vector.h
+
+Z:/course_/libs/data_structures/vector/vector.h
+stdio.h
+-
+stdlib.h
+-
+malloc.h
+-
+stdbool.h
+-
+

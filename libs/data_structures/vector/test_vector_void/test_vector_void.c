@@ -432,7 +432,7 @@ void test_vector_set_vector_value_zero_vector_void() {
     vectorVoid_t v = create_vector_void(5, sizeof(int));
 
     int numberToWrite = 1;
-    for (register int i = 0; i < 6; i++) {
+    for (register int i = 0; i < 5; i++) {
         set_vector_value_void(&v, i, &numberToWrite);
         numberToWrite++;
     }
@@ -454,7 +454,7 @@ void test_vector_set_vector_value_double_vector_void() {
     vectorVoid_t v = create_vector_void(5, sizeof(int));
 
     double numberToWrite = 1;
-    for (register int i = 0; i < 6; i++) {
+    for (register int i = 0; i < 5; i++) {
         set_vector_value_void(&v, i, &numberToWrite);
         numberToWrite++;
     }

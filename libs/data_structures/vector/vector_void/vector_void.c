@@ -58,7 +58,11 @@ bool is_element_in_vector_void(const vectorVoid_t *v, const size_t checkElementI
     return (checkElementIndex >= 0 && checkElementIndex <= (v)->size - 1);
 }
 
-void get_vector_value_void(vectorVoid_t *v, size_t index, void *destination) {
+bool is_element_index_in_capacity(const vectorVoid_t *v, const size_t checkElementIndex) {
+    return (checkElementIndex >= 0) && checkElementIndex <= (v)->capacity - 1;
+}
+
+void get_vector_value_void(vectorVoid_t *v, const size_t index, void *destination) {
     if (is_element_in_vector_void(v, index)) {
         char *source = (char *) (v)->data + index * (v)->baseTypeSize;
         memcpy(destination, source, (v)->baseTypeSize);
@@ -71,8 +75,8 @@ void get_vector_value_void(vectorVoid_t *v, size_t index, void *destination) {
     exit(604);
 }
 
-void set_vector_value_void(vectorVoid_t *v, size_t index, void *source) {
-    if (is_element_in_vector_void(v, index)) {
+void set_vector_value_void(vectorVoid_t *v, const size_t index, void *source) {
+    if (is_element_index_in_capacity(v, index)) {
         char *destination = (char *) (v)->data + index * (v)->baseTypeSize;
         memcpy(destination, source, (v)->baseTypeSize);
         return;
