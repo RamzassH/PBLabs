@@ -9,6 +9,8 @@
 Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.c
 test_vector_void.h
 Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h
+float.h
+-
 
 Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h
 ../vector_void/vector_void.h
@@ -29,4 +31,6 @@ stdbool.h
 Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
 ../vector_t/vector.h
 Z:/course_/libs/data_structures/vector/vector_t/vector.h
+string.h
+-
 

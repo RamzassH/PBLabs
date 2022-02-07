@@ -3,6 +3,8 @@
 
 #include "../vector_t/vector.h"
 
+#include <string.h>
+
 typedef struct {
     void *data;             /*указатель на нулевой элемент вектора*/
     size_t size;            /*размер вектора*/
@@ -19,5 +21,17 @@ void shrink_to_fit_void(vectorVoid_t *v);
 void clear_void(vectorVoid_t *v);
 
 void delete_vector_void(vectorVoid_t *v);
+
+bool is_empty_void(vectorVoid_t *v);
+
+bool is_full_void(vectorVoid_t *v);
+
+void get_vector_value_void(vectorVoid_t *v, size_t index, void *destination);
+
+void set_vector_value_void(vectorVoid_t *v, size_t index, void *source);
+
+void pop_back_void(vectorVoid_t *v);
+
+void push_back_void(vectorVoid_t *v, void *source);
 
 #endif

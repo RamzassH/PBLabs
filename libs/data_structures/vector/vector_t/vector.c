@@ -63,8 +63,20 @@ bool is_full(vector_t *v) {
     return (v)->size == (v)->capacity;
 }
 
+bool is_element_in_vector(const vector_t *v, const size_t checkElementIndex) {
+    return (checkElementIndex >= 0 && checkElementIndex <= (v)->size - 1);
+}
+
+
 int get_vector_value(vector_t *v, const size_t i) {
-    return (v)->data[i];
+    if (is_element_in_vector(v, i)) {
+        return (v)->data[i];
+    }
+
+    printf("\a");
+    fprintf(stderr, "IndexError: a[%llu] is not exists", i);
+
+    exit(604);
 }
 
 void push_back(vector_t *v, const int x) {
@@ -88,10 +100,6 @@ void pop_back(vector_t *v) {
     }
 
     (v)->size--;
-}
-
-bool is_element_in_vector(const vector_t *v, const size_t checkElementIndex) {
-    return (checkElementIndex >= 0 && checkElementIndex <= (v)->size - 1);
 }
 
 int *at_vector(vector_t *v, const size_t index) {
