@@ -94,8 +94,8 @@ void push_back_void(vectorVoid_t *v, void *source) {
     }
 
     char *lastElement = (char *) (v)->data + (v)->size * (v)->baseTypeSize;
-
     memcpy(lastElement, source, v->baseTypeSize);
+
     (v)->size++;
 }
 

@@ -34,8 +34,11 @@ void clear(vector_t *v);
  */
 void shrink_to_fit(vector_t *v);
 
-
+/*
+ * Освобождает память, выделенную под вектор v
+ */
 void delete_vector(vector_t *v);
+
 /*
  * Проверяет, является ли вектор пустым.
  */
