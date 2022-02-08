@@ -4,7 +4,7 @@ vectorVoid_t create_vector_void(const size_t needCapacity, const size_t baseType
     void *data = NULL;
 
     if (needCapacity > 0) {
-        size_t needMemorySize = needCapacity * sizeof(baseTypeSize);
+        size_t needMemorySize = needCapacity * baseTypeSize;
         data = (void *) malloc(needMemorySize);
 
         check_malloc(data, needMemorySize);
