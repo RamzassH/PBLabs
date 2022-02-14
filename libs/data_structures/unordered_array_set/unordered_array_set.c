@@ -4,6 +4,7 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <stdlib.h>
+
 #include "unordered_array_set.h"
 
 unordered_array_set unordered_array_set_create(size_t capacity)

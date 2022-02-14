@@ -104,11 +104,25 @@ libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.s"
 	cd /d Z:\course_\cmake-build-debug\libs\algorithms && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\vector\test_vector_void\test_vector_void.c -o CMakeFiles\algorithms.dir\__\data_structures\vector\test_vector_void\test_vector_void.c.s
 
+libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.obj: libs/algorithms/CMakeFiles/algorithms.dir/flags.make
+libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.obj: ../libs/data_structures/matrix/matrix_t/matrix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.obj"
+	cd /d Z:\course_\cmake-build-debug\libs\algorithms && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\algorithms.dir\__\data_structures\matrix\matrix_t\matrix.c.obj -c Z:\course_\libs\data_structures\matrix\matrix_t\matrix.c
+
+libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.i"
+	cd /d Z:\course_\cmake-build-debug\libs\algorithms && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\data_structures\matrix\matrix_t\matrix.c > CMakeFiles\algorithms.dir\__\data_structures\matrix\matrix_t\matrix.c.i
+
+libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.s"
+	cd /d Z:\course_\cmake-build-debug\libs\algorithms && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\matrix\matrix_t\matrix.c -o CMakeFiles\algorithms.dir\__\data_structures\matrix\matrix_t\matrix.c.s
+
 # Object files for target algorithms
 algorithms_OBJECTS = \
 "CMakeFiles/algorithms.dir/array/array.c.obj" \
 "CMakeFiles/algorithms.dir/__/data_structures/vector/vector_void/vector_void.c.obj" \
-"CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.obj"
+"CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.obj" \
+"CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.obj"
 
 # External object files for target algorithms
 algorithms_EXTERNAL_OBJECTS =
@@ -116,9 +130,10 @@ algorithms_EXTERNAL_OBJECTS =
 libs/algorithms/libalgorithms.a: libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj
 libs/algorithms/libalgorithms.a: libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/vector_void/vector_void.c.obj
 libs/algorithms/libalgorithms.a: libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/vector/test_vector_void/test_vector_void.c.obj
+libs/algorithms/libalgorithms.a: libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix_t/matrix.c.obj
 libs/algorithms/libalgorithms.a: libs/algorithms/CMakeFiles/algorithms.dir/build.make
 libs/algorithms/libalgorithms.a: libs/algorithms/CMakeFiles/algorithms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libalgorithms.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libalgorithms.a"
 	cd /d Z:\course_\cmake-build-debug\libs\algorithms && $(CMAKE_COMMAND) -P CMakeFiles\algorithms.dir\cmake_clean_target.cmake
 	cd /d Z:\course_\cmake-build-debug\libs\algorithms && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\algorithms.dir\link.txt --verbose=$(VERBOSE)
 

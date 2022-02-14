@@ -153,6 +153,54 @@ bitset/bitset.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.s
 .PHONY : bitset/bitset.c.s
 
+matrix/matrix_t/matrix.obj: matrix/matrix_t/matrix.c.obj
+.PHONY : matrix/matrix_t/matrix.obj
+
+# target to build an object file
+matrix/matrix_t/matrix.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.obj
+.PHONY : matrix/matrix_t/matrix.c.obj
+
+matrix/matrix_t/matrix.i: matrix/matrix_t/matrix.c.i
+.PHONY : matrix/matrix_t/matrix.i
+
+# target to preprocess a source file
+matrix/matrix_t/matrix.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.i
+.PHONY : matrix/matrix_t/matrix.c.i
+
+matrix/matrix_t/matrix.s: matrix/matrix_t/matrix.c.s
+.PHONY : matrix/matrix_t/matrix.s
+
+# target to generate assembly for a file
+matrix/matrix_t/matrix.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.s
+.PHONY : matrix/matrix_t/matrix.c.s
+
+matrix/test_matrix/test_matrix.obj: matrix/test_matrix/test_matrix.c.obj
+.PHONY : matrix/test_matrix/test_matrix.obj
+
+# target to build an object file
+matrix/test_matrix/test_matrix.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/test_matrix/test_matrix.c.obj
+.PHONY : matrix/test_matrix/test_matrix.c.obj
+
+matrix/test_matrix/test_matrix.i: matrix/test_matrix/test_matrix.c.i
+.PHONY : matrix/test_matrix/test_matrix.i
+
+# target to preprocess a source file
+matrix/test_matrix/test_matrix.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/test_matrix/test_matrix.c.i
+.PHONY : matrix/test_matrix/test_matrix.c.i
+
+matrix/test_matrix/test_matrix.s: matrix/test_matrix/test_matrix.c.s
+.PHONY : matrix/test_matrix/test_matrix.s
+
+# target to generate assembly for a file
+matrix/test_matrix/test_matrix.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/test_matrix/test_matrix.c.s
+.PHONY : matrix/test_matrix/test_matrix.c.s
+
 ordered_array_set/ordered_array_set.obj: ordered_array_set/ordered_array_set.c.obj
 .PHONY : ordered_array_set/ordered_array_set.obj
 
@@ -225,30 +273,6 @@ vector/test_vector/vector_test.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.s
 .PHONY : vector/test_vector/vector_test.c.s
 
-vector/test_vector_void/test_vector_void.obj: vector/test_vector_void/test_vector_void.c.obj
-.PHONY : vector/test_vector_void/test_vector_void.obj
-
-# target to build an object file
-vector/test_vector_void/test_vector_void.c.obj:
-	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj
-.PHONY : vector/test_vector_void/test_vector_void.c.obj
-
-vector/test_vector_void/test_vector_void.i: vector/test_vector_void/test_vector_void.c.i
-.PHONY : vector/test_vector_void/test_vector_void.i
-
-# target to preprocess a source file
-vector/test_vector_void/test_vector_void.c.i:
-	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.i
-.PHONY : vector/test_vector_void/test_vector_void.c.i
-
-vector/test_vector_void/test_vector_void.s: vector/test_vector_void/test_vector_void.c.s
-.PHONY : vector/test_vector_void/test_vector_void.s
-
-# target to generate assembly for a file
-vector/test_vector_void/test_vector_void.c.s:
-	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.s
-.PHONY : vector/test_vector_void/test_vector_void.c.s
-
 vector/vector_t/vector.obj: vector/vector_t/vector.c.obj
 .PHONY : vector/vector_t/vector.obj
 
@@ -309,6 +333,12 @@ help:
 	@echo ... bitset/bitset.obj
 	@echo ... bitset/bitset.i
 	@echo ... bitset/bitset.s
+	@echo ... matrix/matrix_t/matrix.obj
+	@echo ... matrix/matrix_t/matrix.i
+	@echo ... matrix/matrix_t/matrix.s
+	@echo ... matrix/test_matrix/test_matrix.obj
+	@echo ... matrix/test_matrix/test_matrix.i
+	@echo ... matrix/test_matrix/test_matrix.s
 	@echo ... ordered_array_set/ordered_array_set.obj
 	@echo ... ordered_array_set/ordered_array_set.i
 	@echo ... ordered_array_set/ordered_array_set.s
@@ -318,9 +348,6 @@ help:
 	@echo ... vector/test_vector/vector_test.obj
 	@echo ... vector/test_vector/vector_test.i
 	@echo ... vector/test_vector/vector_test.s
-	@echo ... vector/test_vector_void/test_vector_void.obj
-	@echo ... vector/test_vector_void/test_vector_void.i
-	@echo ... vector/test_vector_void/test_vector_void.s
 	@echo ... vector/vector_t/vector.obj
 	@echo ... vector/vector_t/vector.i
 	@echo ... vector/vector_t/vector.s

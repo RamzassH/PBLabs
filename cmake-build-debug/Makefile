@@ -154,6 +154,30 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+libs/data_structures/matrix/matrix_t/matrix.obj: libs/data_structures/matrix/matrix_t/matrix.c.obj
+.PHONY : libs/data_structures/matrix/matrix_t/matrix.obj
+
+# target to build an object file
+libs/data_structures/matrix/matrix_t/matrix.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/matrix_t/matrix.c.obj
+.PHONY : libs/data_structures/matrix/matrix_t/matrix.c.obj
+
+libs/data_structures/matrix/matrix_t/matrix.i: libs/data_structures/matrix/matrix_t/matrix.c.i
+.PHONY : libs/data_structures/matrix/matrix_t/matrix.i
+
+# target to preprocess a source file
+libs/data_structures/matrix/matrix_t/matrix.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/matrix_t/matrix.c.i
+.PHONY : libs/data_structures/matrix/matrix_t/matrix.c.i
+
+libs/data_structures/matrix/matrix_t/matrix.s: libs/data_structures/matrix/matrix_t/matrix.c.s
+.PHONY : libs/data_structures/matrix/matrix_t/matrix.s
+
+# target to generate assembly for a file
+libs/data_structures/matrix/matrix_t/matrix.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/matrix_t/matrix.c.s
+.PHONY : libs/data_structures/matrix/matrix_t/matrix.c.s
+
 libs/data_structures/vector/test_vector_void/test_vector_void.obj: libs/data_structures/vector/test_vector_void/test_vector_void.c.obj
 .PHONY : libs/data_structures/vector/test_vector_void/test_vector_void.obj
 
@@ -237,6 +261,9 @@ help:
 	@echo ... algorithms
 	@echo ... course_
 	@echo ... data_structures
+	@echo ... libs/data_structures/matrix/matrix_t/matrix.obj
+	@echo ... libs/data_structures/matrix/matrix_t/matrix.i
+	@echo ... libs/data_structures/matrix/matrix_t/matrix.s
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.obj
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.i
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.s

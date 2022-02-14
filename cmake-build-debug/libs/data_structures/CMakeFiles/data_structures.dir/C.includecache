@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-Z:/course_/libs/data_structures/vector/vector_t/vector.h
-stdio.h
+Z:/course_/libs/algorithms/array/array.h
+stddef.h
 -
-stdlib.h
+
+Z:/course_/libs/data_structures/matrix/matrix_t/matrix.c
+assert.h
+-
+matrix.h
+Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+
+Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+stdio.h
 -
 malloc.h
 -
 stdbool.h
 -
-
-Z:/course_/libs/data_structures/vector/vector_void/vector_void.c
-vector_void.h
-Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
-
-Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
-../vector_t/vector.h
-Z:/course_/libs/data_structures/vector/vector_t/vector.h
-string.h
+Z:/course_/libs/algorithms/array/array.h
 -
 

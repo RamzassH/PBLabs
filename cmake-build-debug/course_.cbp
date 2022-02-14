@@ -158,6 +158,22 @@
 		<Unit filename="Z:/course_/libs/data_structures/bitset/bitset.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/matrix_t/matrix.c">
+			<Option target="course_"/>
+			<Option target="data_structures"/>
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h">
+			<Option target="course_"/>
+			<Option target="data_structures"/>
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/ordered_array_set/ordered_array_set.c">
 			<Option target="data_structures"/>
 		</Unit>
@@ -178,13 +194,10 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.c">
 			<Option target="course_"/>
-			<Option target="data_structures"/>
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h">
 			<Option target="course_"/>
-			<Option target="data_structures"/>
-			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/vector/vector_t/vector.c">
 			<Option target="data_structures"/>
@@ -198,6 +211,8 @@
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/vector/vector_void/vector_void.h">
+			<Option target="course_"/>
+			<Option target="data_structures"/>
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/main.c">

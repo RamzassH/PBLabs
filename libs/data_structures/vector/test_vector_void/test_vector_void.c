@@ -323,8 +323,6 @@ void test_vector_push_back_full_vector_void() {
 
         expectedNumber++;
     }
-
-    delete_vector_void(&v);
 }
 
 void test_vector_push_back_double_vector_void() {

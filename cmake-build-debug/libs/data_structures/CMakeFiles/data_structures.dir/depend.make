@@ -4,6 +4,15 @@
 libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj: \
  ../libs/data_structures/bitset/bitset.c \
  ../libs/data_structures/bitset/bitset.h
+libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.obj: \
+ ../libs/algorithms/array/array.h \
+ ../libs/data_structures/matrix/matrix_t/matrix.c \
+ ../libs/data_structures/matrix/matrix_t/matrix.h
+libs/data_structures/CMakeFiles/data_structures.dir/matrix/test_matrix/test_matrix.c.obj: \
+ ../libs/algorithms/array/array.h \
+ ../libs/data_structures/matrix/matrix_t/matrix.h \
+ ../libs/data_structures/matrix/test_matrix/test_matrix.c \
+ ../libs/data_structures/matrix/test_matrix/test_matrix.h
 libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/ordered_array_set/ordered_array_set.c \
@@ -16,11 +25,6 @@ libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_te
  ../libs/data_structures/vector/test_vector/vector_test.c \
  ../libs/data_structures/vector/test_vector/vector_test.h \
  ../libs/data_structures/vector/vector_t/vector.h
-libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector_void/test_vector_void.c.obj: \
- ../libs/data_structures/vector/test_vector_void/test_vector_void.c \
- ../libs/data_structures/vector/test_vector_void/test_vector_void.h \
- ../libs/data_structures/vector/vector_t/vector.h \
- ../libs/data_structures/vector/vector_void/vector_void.h
 libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj: \
  ../libs/data_structures/vector/vector_t/vector.c \
  ../libs/data_structures/vector/vector_t/vector.h
