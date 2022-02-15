@@ -120,11 +120,26 @@ void test_transposes_matrix() {
 
     free_mem_matrix(m);
 }
+
+void test_get_matrix_min_pos() {
+    matrix_t m = get_mem_matrix(3, 3);
+
+    input_matrix(m);
+    output_matrix(m);
+
+    position_t p = get_min_value_pos(m);
+
+    assert(m.values[p.rowIndex][p.colIndex] == m.values[0][0]);
+
+    free_mem_matrix(m);
+}
+
 void test_matrix() {
 //    test_input_and_output_matrix();
 //    test_swap_rows_matrix();
 //    test_swap_cols_matrix();
 //    test_is_e_matrix();
 //    test_is_symmetric_matrix();
-    test_transposes_matrix();
+//    test_transposes_matrix();
+    test_get_matrix_min_pos();
 }

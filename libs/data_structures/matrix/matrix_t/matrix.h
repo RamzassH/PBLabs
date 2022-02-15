@@ -51,7 +51,7 @@ void insertion_sort_cols_matrix_by_col_criteria(matrix_t m,
 
 bool is_square_matrix(matrix_t m);
 
-bool is_two_matrices_equal(matrix_t m1, matrix_t m2);
+bool are_two_matrices_equal(matrix_t m1, matrix_t m2);
 
 bool is_e_matrix(matrix_t m);
 
@@ -63,7 +63,14 @@ position_t get_min_value_pos(matrix_t m);
 
 position_t get_max_value_pos(matrix_t m);
 
+matrix_t mul_matrices(matrix_t m1, matrix_t m2);
 
+void get_square_of_matrix_if_symmetric(matrix_t *m);
 
+void sort_rows_by_min_element(matrix_t (m));
+
+void sort_cols_by_min_element(matrix_t (m));
+
+void transpose_if_matrix_has_Not_equal_of_rows(matrix_t m);
 
 #endif
