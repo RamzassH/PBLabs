@@ -211,31 +211,24 @@ int get_max(const int *a, const int n) {
             max = a[i];
         }
     }
-        printf("\n");
-        printf("%d ", max);
-        printf("\n");
+
+    printf("%d ", max);
 
     return max;
 }
 
-void insert_sort_rows_matrix(matrix_t (m), int *aRows) {
-        for (int i = 1; i < (m).nRows; ++i) {
-            int temp = aRows[i];
-            for (int j = i - 1; j >= 0; --j) {
-                if (aRows[j] < temp){
-                    break;
-                }
-
-                aRows[j + 1] = aRows[j];
-                swap_rows((m), j + 1, j);
-                aRows[j] = temp;
+void insertion_sort_matrix(matrix_t *m, int *aRows, void (f)(matrix_t *, int, int), int rowOrCols){
+    for (int i = 1; i < rowOrCols; ++i) {
+        int temp = aRows[i];
+        for (int j = i - 1; j >= 0; --j) {
+            if (aRows[j] < temp) {
+                break;
             }
-        }
-}
 
-void output_array(int *a, int n) {
-    for (register size_t i = 0; i < n; ++i) {
-        printf("%d ", a[i]);
+            aRows[j + 1] = aRows[j];
+            f(m, j + 1, j);
+            aRows[j] = temp;
+        }
     }
 }
 
@@ -247,7 +240,7 @@ void insertion_sort_rows_matrix_by_row_criteria(matrix_t (m),
         aRows[i] = criteria((m).values[i], (m).nCols);
     }
 
-    insert_sort_rows_matrix(m, aRows);
+    insertion_sort_matrix(&m, aRows, swap_rows, (m).nRows);
 }
 
 void sort_rows_by_min_element(matrix_t (m)) {
@@ -264,21 +257,6 @@ int get_min(const int *a, const int n) {
     return min;
 }
 
-void insert_sort_cols_matrix(matrix_t (m), int *aCols) {
-    for (int i = 1; i < (m).nCols; ++i) {
-        int temp = aCols[i];
-        for (int j = i - 1; j >= 0; --j) {
-            if (aCols[j] < temp){
-                break;
-            }
-
-            aCols[j + 1] = aCols[j];
-            swap_columns((m), j + 1, j);
-            aCols[j] = temp;
-        }
-    }
-}
-
 void insertion_sort_cols_matrix_by_col_criteria(matrix_t (m),
                                                 int (*criteria)(int *, int)) {
     int aCols[(m).nCols];
@@ -292,7 +270,7 @@ void insertion_sort_cols_matrix_by_col_criteria(matrix_t (m),
         aCols[j] = criteria(aTemp, (m).nRows);
     }
 
-    insert_sort_cols_matrix(m, aCols);
+    insertion_sort_matrix(&m, aCols, swap_columns, (m).nCols);
 }
 
 void sort_cols_by_min_element(matrix_t (m)) {
@@ -342,11 +320,14 @@ position_t get_max_value_pos(matrix_t (m)) {
 matrix_t mul_matrices(matrix_t m1, matrix_t m2) {
     matrix_t mul_result = get_mem_matrix((m1).nRows, (m2).nCols);
 
+    int mul_element = 0;
     for(size_t i = 0; i < (m1).nRows; ++i) {
         for (size_t j = 0; j < (m2).nCols; j++) {
             for (size_t k = 0; k < (mul_result).nRows; k++) {
-                (mul_result).values[i][j] += (m1).values[i][k] * (m2).values[k][j];
+                mul_element += (m1).values[i][k] * (m2).values[k][j];
             }
+            (mul_result).values[i][j] = mul_element;
+            mul_element = 0;
         }
     }
 
@@ -355,4 +336,61 @@ matrix_t mul_matrices(matrix_t m1, matrix_t m2) {
 
 void get_square_of_matrix_if_symmetric(matrix_t *(m)) {
     *m = mul_matrices(*m, *m);
+}
+
+long long get_sum(int *a, int n) {
+    int sum = 0;
+    for (register size_t i = 0; i < n; ++i) {
+        sum += a[i];
+    }
+
+    return (sum);
+}
+
+bool is_unique(long long *a, int n) {
+    for (register size_t i = 0; i < n; ++i) {
+        for (register size_t j = n - 1; j > i; --j) {
+            if (a[i] == a[j]) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+void transpose_if_matrix_has_not_equal_of_rows(matrix_t m) {
+    long long arraySum[(m).nRows];
+    for (register size_t i = 0; i < (m).nRows; ++i) {
+        arraySum[i] = get_sum((m).values[i], (m).nRows);
+    }
+
+    if (!(is_unique(arraySum, (m).nRows))) {
+        printf("\a");
+        fprintf(stderr, "elements are not unique");
+        exit(504);
+    }
+
+    transpose_square_matrix(m);
+}
+
+bool is_mutually_inverse_matrices(matrix_t m1, matrix_t m2) {
+
+    matrix_t mul_result = mul_matrices(m1, m2);
+
+    return is_e_matrix(mul_result);
+}
+
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+long long find_sum_of_maxes_of_pseudo_diagonal(matrix_t m) {
+//    int diagonalMax = 0;
+//    int sumOfMax = 0;
+//    for (register size_t i = 0; i < (m).nRows - 1; ++i) {
+//        for (register size_t j = 0; j < (m).nCols - 1; ++j) {
+//            diagonalMax = max((m).values[i][j], (m).values[i][j])
+//        }
+//    }
 }

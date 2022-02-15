@@ -68,9 +68,28 @@ void task5() {
         fprintf_s(stderr, "is not squared matrix");
     }
 
-    transpose_if_matrix_has_Not_equal_of_rows(m);
+    transpose_if_matrix_has_not_equal_of_rows(m);
+
+    output_matrix(m);
 }
 
+void task6() {
+    matrix_t (a) = get_mem_matrix(3, 3);
+    matrix_t (b) = get_mem_matrix(3, 3);
+
+    input_matrix(a);
+    input_matrix(b);
+
+    printf("%d", is_mutually_inverse_matrices(a, b));
+}
+
+void task7() {
+    matrix_t (m) = get_mem_matrix(3, 4);
+
+    input_matrix(m);
+
+    long long sumOfDiagonals = find_sum_of_maxes_of_pseudo_diagonal(m)
+}
 int main() {
 //    vector_test();
 //    test_vector_void();
@@ -80,6 +99,9 @@ int main() {
 //    task2();
 //    task3();
 //    task4();
+//    task5();
+//   task6();
+    task7();
 
     return 0;
 }
