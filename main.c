@@ -84,11 +84,88 @@ void task6() {
 }
 
 void task7() {
+    matrix_t (m) = get_mem_matrix(5, 3);
+
+    input_matrix(m);
+
+    long long sumOfDiagonals = find_sum_of_maxes_of_pseudo_diagonal(m);
+
+    printf("%lld", sumOfDiagonals);
+}
+
+void task8() {
     matrix_t (m) = get_mem_matrix(3, 4);
 
     input_matrix(m);
 
-    long long sumOfDiagonals = find_sum_of_maxes_of_pseudo_diagonal(m)
+    int minInArea = get_min_in_area(m);
+
+    printf("%d", minInArea);
+}
+
+void task9() {
+}
+
+void task10() {
+    matrix_t (m) = get_mem_matrix(6,2);
+
+    input_matrix(m);
+
+    int countUniqueElements = count_eq_classes_by_rows_sum(m);
+
+    printf("%d", countUniqueElements);
+}
+
+void task11() {
+    matrix_t (m) = get_mem_matrix(3, 4);
+
+    input_matrix(m);
+
+    int nSpecials = get_n_special_element(m);
+
+    printf("%d", nSpecials);
+}
+
+void task12() {
+    matrix_t (m) = get_mem_matrix(3, 3);
+
+    input_matrix(m);
+
+    swap_penultimate_row(m, (m).nRows);
+
+    output_matrix(m);
+}
+
+//void task13() {
+//    int nMatrix;
+//    scanf("%d", &nMatrix);
+//    matrix_t *ms = get_mem_array_of_matrices(nMatrix, 2, 2);
+//
+//    input_matrices(ms, nMatrix);
+//
+//    printMatrixWithMaxZeroRows(ms, nMatrix);
+//
+//
+//}
+
+void task14() {
+
+}
+
+void task15() {
+
+}
+
+void task16() {
+
+}
+
+void task17() {
+
+}
+
+void task18() {
+
 }
 int main() {
 //    vector_test();
@@ -100,8 +177,18 @@ int main() {
 //    task3();
 //    task4();
 //    task5();
-//   task6();
-    task7();
-
+//    task6();
+//    task7();
+//    task8();
+//    task9();
+//    task10();
+//    task11();
+//    task12();
+//    task13();
+    task14();
+    task15();
+    task16();
+    task17();
+    task18();
     return 0;
 }

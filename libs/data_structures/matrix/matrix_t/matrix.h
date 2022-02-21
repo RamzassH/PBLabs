@@ -77,4 +77,18 @@ void transpose_if_matrix_has_not_equal_of_rows(matrix_t m);
 
 long long find_sum_of_maxes_of_pseudo_diagonal(matrix_t m);
 
+int get_min_in_area(matrix_t m);
+
+void sort_by_distance(matrix_t m);
+
+int get_n_special_element(matrix_t m);
+
+int count_eq_classes_by_rows_sum(matrix_t m);
+
+void swap_penultimate_row(matrix_t m, int n);
+
+//void printMatrixWithMaxZeroRows(matrix_t ms, int nMatrix) {
+//
+//}
+
 #endif
