@@ -14,12 +14,33 @@ matrix_t get_mem_matrix(const int nRows, const int nCols) {
     return (matrix_t) {values, nRows, nCols};
 }
 
+matrix_f_t get_mem_matrix_f(const int nRows, const int nCols) {
+    double **values = (double **) malloc((sizeof(double *) * nRows));
+
+    for (register size_t i = 0; i < nRows; ++i) {
+        values[i] = (double *) malloc(sizeof(double) * nCols);
+    }
+
+    return (matrix_f_t) {values, nRows, nCols};
+}
+
 matrix_t *get_mem_array_of_matrices(int nMatrices,
                             int nRows, int nCols) {
     matrix_t *(ms) = (matrix_t *) malloc(sizeof(matrix_t) * nMatrices);
 
     for (register size_t i = 0; i < nMatrices; ++i) {
         (ms)[i] = get_mem_matrix(nRows, nCols);
+    }
+
+    return (ms);
+}
+
+matrix_f_t *get_mem_array_of_matrices_f(int nMatrices,
+                                    int nRows, int nCols) {
+    matrix_f_t *(ms) = (matrix_f_t *) malloc(sizeof(matrix_f_t) * nMatrices);
+
+    for (register size_t i = 0; i < nMatrices; ++i) {
+        (ms)[i] = get_mem_matrix_f(nRows, nCols);
     }
 
     return (ms);
@@ -139,9 +160,23 @@ void input_matrix(matrix_t (m)) {
     }
 }
 
+void input_matrix_f(matrix_f_t (m)) {
+    for (register size_t i = 0; i < (m).nRows; ++i) {
+        for (register size_t j = 0; j < (m).nCols; ++j) {
+            scanf("%lf", &(m).values[i][j]);
+        }
+    }
+}
+
 void input_matrices(matrix_t *(ms), int nMatrices) {
     for (register size_t i = 0; i < nMatrices; ++i) {
         input_matrix(ms[i]);
+    }
+}
+
+void input_matrices_f(matrix_f_t *(ms), int nMatrices) {
+    for (register size_t i = 0; i < nMatrices; ++i) {
+        input_matrix_f(ms[i]);
     }
 }
 
@@ -150,6 +185,17 @@ void output_matrix(matrix_t (m)) {
         printf("{");
         for (register size_t j = 0; j < (m).nCols; ++j) {
             printf("%d ", (m).values[i][j]);
+        }
+        printf("\b}\n");
+    }
+    printf("\n");
+}
+
+void output_matrix_f(matrix_f_t (m)) {
+    for (register size_t i = 0; i < (m).nRows; ++i) {
+        printf("{");
+        for (register size_t j = 0; j < (m).nCols; ++j) {
+            printf("%lf ", (m).values[i][j]);
         }
         printf("\b}\n");
     }
@@ -678,19 +724,70 @@ void print_matrices_with_max_zero_rows(matrix_t *ms, int nMatrix) {
     }
 }
 
-//void print_matrices_with_min_abs(matrix_t *ms, int nMatrix) {
-//    int quantityOfZeroRows = 0;
-//    int min = 0;
-//    for (size_t i = 0; i < nMatrix; ++i) {
-//        quantityOfZeroRows = count_zero_rows(ms[i]);
-//        if (quantityOfZeroRows > max) {
-//            max = quantityOfZeroRows;
-//        }
-//    }
-//
-//    for (size_t i = 0; i < nMatrix; ++i) {
-//        if (count_zero_rows(ms[i]) == max) {
-//            output_matrix(ms[i]);
-//        }
-//    }
-//}
+double get_min_abs_matrix(matrix_f_t (m)) {
+    double min = fabs((m).values[0][0]);
+    for (size_t i = 0; i < (m).nRows; ++i) {
+        for (size_t j = 0; j < (m).nCols; ++j) {
+            double currentAbs = fabs((m).values[i][j]);
+            if (currentAbs < min) {
+                min = currentAbs;
+            }
+        }
+    }
+
+    return min;
+}
+
+void print_matrices_with_min_abs(matrix_f_t *ms, int nMatrix) {
+    double absValue = 0;
+    double min = get_min_abs_matrix(ms[0]);
+    for (size_t i = 1; i < nMatrix; ++i) {
+        absValue = get_min_abs_matrix(ms[i]);
+        if (absValue < min) {
+            min = absValue;
+        }
+    }
+
+    for (size_t i = 0; i < nMatrix; ++i) {
+        if (get_min_abs_matrix(ms[i]) == min) {
+            output_matrix_f(ms[i]);
+        }
+    }
+}
+
+int get_n_special_element2(matrix_t (m)) {
+    int countSpecials = 0;
+    for (size_t i = 0; i < (m).nRows; i++)
+    {
+        for (size_t j = 1; j < (m).nCols - 1; j++) {
+            if (min((m).values[i][j - 1], (m).values[i][j]) <
+                min((m).values[i][j + 1], (m).values[i][j])) {
+                countSpecials++;
+            }
+        }
+    }
+
+    return countSpecials;
+}
+
+long long get_scalar_product_row_and_col(matrix_t m, int i, int j) {
+    long long scalarProduct = 0;
+    long long product = 1;
+    for (size_t l = 0; l < (m).nRows; ++l) {
+        product = (m).values[i][l] * (m).values[l][j];
+        scalarProduct += product;
+        product = 1;
+    }
+
+    return scalarProduct;
+}
+
+long long get_special_scalar_product(matrix_t m) {
+    position_t posOfCol = get_min_value_pos(m);
+    position_t posOfRow = get_max_value_pos(m);
+
+    long long scalarProduct = get_scalar_product_row_and_col(m,
+                                                             (posOfRow).rowIndex, (posOfCol).colIndex);
+
+    return scalarProduct;
+}

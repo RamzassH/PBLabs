@@ -14,6 +14,12 @@ typedef struct {
 }matrix_t;
 
 typedef struct {
+    double **values;   //элементы матрицы
+    int nRows;      //количество рядов
+    int nCols;      //количество столбцов
+}matrix_f_t;
+
+typedef struct {
     int rowIndex;
     int colIndex;
 }position_t;
@@ -25,7 +31,11 @@ typedef struct {
  */
 matrix_t get_mem_matrix(int nRows, int nCols);
 
+matrix_f_t get_mem_matrix_f(const int nRows, const int nCols);
+
 matrix_t *get_mem_array_of_matrices(int nMatrices, int nRows, int nCols);
+
+matrix_f_t *get_mem_array_of_matrices_f(int nMatrices, int nRows, int nCols);
 
 void free_mem_matrix(matrix_t m);
 
@@ -33,9 +43,15 @@ void free_mem_matrices(matrix_t *ms, int nMatrices);
 
 void input_matrix(matrix_t m);
 
+void input_matrix_f(matrix_f_t (m));
+
 void input_matrices(matrix_t *ms, int nMatrices);
 
+void input_matrices_f(matrix_f_t *(ms), int nMatrices);
+
 void output_matrix(matrix_t m);
+
+void output_matrix_f(matrix_f_t (m));
 
 void output_matrices(matrix_t *ms, int nMatrices);
 
@@ -91,5 +107,10 @@ int count_non_descending_rows_matrices(matrix_t *ms, int nMatrix);
 
 void print_matrices_with_max_zero_rows(matrix_t *ms, int nMatrix);
 
-void print_matrices_with_min_abs(matrix_t *ms, int nMatrix);
+void print_matrices_with_min_abs(matrix_f_t *ms, int nMatrix);
+
+int get_n_special_element2(matrix_t (m));
+
+long long get_special_scalar_product(matrix_t m);
+
 #endif

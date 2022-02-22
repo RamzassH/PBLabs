@@ -162,15 +162,19 @@ void task14() {
 void task15() {
     int nMatrix;
     scanf("%d", &nMatrix);
-    matrix_t *ms = get_mem_array_of_matrices(nMatrix, 3, 2);
+    matrix_f_t *ms = get_mem_array_of_matrices_f(nMatrix, 2, 2);
 
-    input_matrices(ms, nMatrix);
+    input_matrices_f(ms, nMatrix);
 
     print_matrices_with_min_abs(ms, nMatrix);
 }
 
 void task16() {
+    matrix_t (m) = get_mem_matrix(3, 5);
 
+    input_matrix(m);
+
+    printf("%d", get_n_special_element2(m));
 }
 
 void task17() {
@@ -178,8 +182,13 @@ void task17() {
 }
 
 void task18() {
+    matrix_t (m) = get_mem_matrix(3, 3);
 
+    input_matrix(m);
+
+    printf("%lld ", get_special_scalar_product(m));
 }
+
 int main() {
 //    vector_test();
 //    test_vector_void();
@@ -199,9 +208,9 @@ int main() {
 //    task12();
 //    task13();
 //    task14();
-    task15();
-    task16();
+//    task15();
+////    task16();
     task17();
-    task18();
+//    task18();
     return 0;
 }
