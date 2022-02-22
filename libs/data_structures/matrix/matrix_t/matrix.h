@@ -87,8 +87,9 @@ int count_eq_classes_by_rows_sum(matrix_t m);
 
 void swap_penultimate_row(matrix_t m, int n);
 
-//void printMatrixWithMaxZeroRows(matrix_t ms, int nMatrix) {
-//
-//}
+int count_non_descending_rows_matrices(matrix_t *ms, int nMatrix);
 
+void print_matrices_with_max_zero_rows(matrix_t *ms, int nMatrix);
+
+void print_matrices_with_min_abs(matrix_t *ms, int nMatrix);
 #endif

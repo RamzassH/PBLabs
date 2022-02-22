@@ -603,9 +603,94 @@ void swap_penultimate_row(matrix_t m, int n) {
 
     position_t minColPos = get_left_min(m);
 
-        for (int i = n - 1; i >= 0; --i) {
-            (m).values[n - 2][i] = (m).values[i][(minColPos).colIndex];
-            output_matrix(m);
-            printf("\n");
-        }
+    for (int i = n - 1; i >= 0; --i) {
+        (m).values[n - 2][i] = (m).values[i][(minColPos).colIndex];
+        output_matrix(m);
+        printf("\n");
+    }
 }
+
+bool is_descending_sorted(int *a, int n) {
+    bool isNonDescending = true;
+    for (size_t i = 0; i < n; ++i) {
+        if (a[i] > a[i + 1]) {
+            isNonDescending = false;
+        }
+    }
+
+    return isNonDescending;
+}
+
+bool has_all_non_descending_rows (matrix_t m) {
+    bool isAllRowsNonDescending = true;
+    for (size_t i = 0; i < (m).nRows; ++i) {
+        if (!(is_descending_sorted((m).values[i], (m).nRows))) {
+            isAllRowsNonDescending = false;
+        }
+    }
+
+    return isAllRowsNonDescending;
+}
+
+int count_non_descending_rows_matrices(matrix_t *ms, int nMatrix) {
+    int countNonDescendingMatrix = 0;
+    for (size_t i = 0; i < nMatrix; ++i) {
+        countNonDescendingMatrix += has_all_non_descending_rows(ms[i]);
+    }
+
+    return countNonDescendingMatrix;
+}
+
+int count_values(const int *a, int n, int value) {
+    int countValue = 0;
+    for (size_t i = 0; i < n; ++i) {
+        countValue += (a[i] == value);
+    }
+
+    return countValue;
+}
+
+int count_zero_rows(matrix_t m) {
+    int countZeroRows = 0;
+    for (size_t i = 0; i < (m).nRows; ++i) {
+        if (count_values((m).values[i], (m).nCols, 0) == (m).nCols) {
+            countZeroRows ++;
+        }
+    }
+
+    return countZeroRows;
+}
+
+void print_matrices_with_max_zero_rows(matrix_t *ms, int nMatrix) {
+    int quantityOfZeroRows = 0;
+    int max = 0;
+    for (size_t i = 0; i < nMatrix; ++i) {
+        quantityOfZeroRows = count_zero_rows(ms[i]);
+        if (quantityOfZeroRows > max) {
+            max = quantityOfZeroRows;
+        }
+    }
+
+    for (size_t i = 0; i < nMatrix; ++i) {
+        if (count_zero_rows(ms[i]) == max) {
+            output_matrix(ms[i]);
+        }
+    }
+}
+
+//void print_matrices_with_min_abs(matrix_t *ms, int nMatrix) {
+//    int quantityOfZeroRows = 0;
+//    int min = 0;
+//    for (size_t i = 0; i < nMatrix; ++i) {
+//        quantityOfZeroRows = count_zero_rows(ms[i]);
+//        if (quantityOfZeroRows > max) {
+//            max = quantityOfZeroRows;
+//        }
+//    }
+//
+//    for (size_t i = 0; i < nMatrix; ++i) {
+//        if (count_zero_rows(ms[i]) == max) {
+//            output_matrix(ms[i]);
+//        }
+//    }
+//}

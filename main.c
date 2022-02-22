@@ -136,24 +136,37 @@ void task12() {
     output_matrix(m);
 }
 
-//void task13() {
-//    int nMatrix;
-//    scanf("%d", &nMatrix);
-//    matrix_t *ms = get_mem_array_of_matrices(nMatrix, 2, 2);
-//
-//    input_matrices(ms, nMatrix);
-//
-//    printMatrixWithMaxZeroRows(ms, nMatrix);
-//
-//
-//}
+void task13() {
+    int nMatrix;
+    scanf("%d", &nMatrix);
+    matrix_t *ms = get_mem_array_of_matrices(nMatrix, 2, 2);
 
-void task14() {
+    input_matrices(ms, nMatrix);
+
+    int countSortedMatrices = count_non_descending_rows_matrices(ms, nMatrix);
+
+    printf("%d", countSortedMatrices);
 
 }
 
-void task15() {
+void task14() {
+    int nMatrix;
+    scanf("%d", &nMatrix);
+    matrix_t *ms = get_mem_array_of_matrices(nMatrix, 3, 2);
 
+    input_matrices(ms, nMatrix);
+
+    print_matrices_with_max_zero_rows(ms, nMatrix);
+}
+
+void task15() {
+    int nMatrix;
+    scanf("%d", &nMatrix);
+    matrix_t *ms = get_mem_array_of_matrices(nMatrix, 3, 2);
+
+    input_matrices(ms, nMatrix);
+
+    print_matrices_with_min_abs(ms, nMatrix);
 }
 
 void task16() {
@@ -185,7 +198,7 @@ int main() {
 //    task11();
 //    task12();
 //    task13();
-    task14();
+//    task14();
     task15();
     task16();
     task17();
