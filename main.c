@@ -170,7 +170,7 @@ void task15() {
 }
 
 void task16() {
-    matrix_t (m) = get_mem_matrix(3, 5);
+    matrix_t (m) = get_mem_matrix(2, 4);
 
     input_matrix(m);
 
@@ -178,6 +178,11 @@ void task16() {
 }
 
 void task17() {
+    matrix_t (m) = get_mem_matrix(3, 3);
+
+    input_matrix(m);
+
+    get_vector_index_with_max_angle( m, &b);
 
 }
 
@@ -209,7 +214,7 @@ int main() {
 //    task13();
 //    task14();
 //    task15();
-////    task16();
+//    task16();
     task17();
 //    task18();
     return 0;

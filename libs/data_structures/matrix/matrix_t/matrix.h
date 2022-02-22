@@ -113,4 +113,6 @@ int get_n_special_element2(matrix_t (m));
 
 long long get_special_scalar_product(matrix_t m);
 
+double get_vector_index_with_max_angle(matrix_t m, int *b);
+
 #endif

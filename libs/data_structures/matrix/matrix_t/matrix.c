@@ -708,7 +708,7 @@ int count_zero_rows(matrix_t m) {
 }
 
 void print_matrices_with_max_zero_rows(matrix_t *ms, int nMatrix) {
-    int quantityOfZeroRows = 0;
+    int quantityOfZeroRows;
     int max = 0;
     for (size_t i = 0; i < nMatrix; ++i) {
         quantityOfZeroRows = count_zero_rows(ms[i]);
@@ -756,18 +756,32 @@ void print_matrices_with_min_abs(matrix_f_t *ms, int nMatrix) {
 }
 
 int get_n_special_element2(matrix_t (m)) {
-    int countSpecials = 0;
-    for (size_t i = 0; i < (m).nRows; i++)
-    {
-        for (size_t j = 1; j < (m).nCols - 1; j++) {
-            if (min((m).values[i][j - 1], (m).values[i][j]) <
-                min((m).values[i][j + 1], (m).values[i][j])) {
-                countSpecials++;
+    int aMaxes[(m).nCols];
+    int aMin[(m).nCols];
+
+    int countSpecial = 0;
+    for (int i = 0; i < (m).nRows; ++i) {
+        aMaxes[0] = (m).values[i][0];
+        aMin[(m).nCols - 1] = (m).values[i][(m.nCols) - 1];
+
+        for (int j = 1, l = (m).nCols - j; j < (m).nCols; ++j, --l) {
+            //заполняется массив префиксных максимумов
+            aMaxes[j] = max(aMaxes[j - 1], (m).values[i][j]);
+            //заполняется массив постфиксных минимумов
+            aMin[l- 1] =  min(aMin[l], (m).values[i][l - 1]);
+        }
+
+        for (int k = 0; k < (m).nCols; ++k) {
+            bool isFirstOrBiggerThanLeftMax = (k == 0) || ((m).values[i][k] > aMaxes[k - 1]);
+            bool isLastOrLessThanRightMin = (k == (m).nCols - 1) || ((m).values[i][k] < aMin[k + 1]);
+
+            if (isFirstOrBiggerThanLeftMax && isLastOrLessThanRightMin) {
+                countSpecial++;
             }
         }
     }
 
-    return countSpecials;
+    return countSpecial;
 }
 
 long long get_scalar_product_row_and_col(matrix_t m, int i, int j) {
@@ -790,4 +804,46 @@ long long get_special_scalar_product(matrix_t m) {
                                                              (posOfRow).rowIndex, (posOfCol).colIndex);
 
     return scalarProduct;
+}
+
+double get_scalar_product(const int *a, const int *b, const int n) {
+    int scalarProduct = 0;
+    for (size_t i = 0; i < n; ++i) {
+        scalarProduct += a[i] * b[i];
+    }
+
+    return scalarProduct;
+}
+
+double get_vector_length(const int *a, const int n) {
+    double sumSquares = 0;
+    for (size_t i = 0; i < n; i++) {
+        sumSquares += pow(a[i], 2);
+    }
+
+    return sqrt(sumSquares);
+}
+
+double get_cosine(int *a, int *b, int n) {
+    double aLength = get_vector_length(a, n);
+    double bLength = get_vector_length(b, n);
+
+    double scalarProduct = get_scalar_product(a, b, n);
+    double cosine = scalarProduct / (aLength * bLength);
+
+    return cosine;
+}
+
+double get_vector_index_with_max_angle(matrix_t m, int *b) {
+    int iMin = 0;
+    double minCosine = get_cosine((m).values[0], b, (m).nCols);
+    for (int i = 1; i < m.nRows; i++) {
+        double currentCosine = get_cosine((m).values[i], b, (m).nCols);
+        if (currentCosine < minCosine) {
+            iMin = i;
+            minCosine = currentCosine;
+        }
+    }
+
+    return iMin;
 }
