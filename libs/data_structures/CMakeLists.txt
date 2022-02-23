@@ -5,4 +5,6 @@ add_library(data_structures
         vector/vector_t/vector.c
         vector/test_vector/vector_test.c
         vector/vector_void/vector_void.c
-        matrix/matrix_t/matrix.c matrix/matrix_t/matrix.h matrix/test_matrix/test_matrix.c matrix/test_matrix/test_matrix.h)
+        matrix/matrix_t/matrix.c
+        matrix/test_matrix/test_matrix.c
+        matrix/task_matrix/task/task.c matrix/task_matrix/test_task/test_task.c matrix/task_matrix/test_task/test_task.h)

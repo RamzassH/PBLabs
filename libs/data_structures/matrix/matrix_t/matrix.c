@@ -553,7 +553,6 @@ void sort_by_distance(matrix_t m) {
 }
 
 int get_n_special_element(matrix_t m) {
-
     int countUniqueElements = 0;
     for (size_t j = 0; j < (m).nCols; ++j) {
         int max = (m).values[0][j];

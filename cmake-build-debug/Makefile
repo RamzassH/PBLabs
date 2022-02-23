@@ -178,6 +178,30 @@ libs/data_structures/matrix/matrix_t/matrix.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/matrix_t/matrix.c.s
 .PHONY : libs/data_structures/matrix/matrix_t/matrix.c.s
 
+libs/data_structures/matrix/task_matrix/task/task.obj: libs/data_structures/matrix/task_matrix/task/task.c.obj
+.PHONY : libs/data_structures/matrix/task_matrix/task/task.obj
+
+# target to build an object file
+libs/data_structures/matrix/task_matrix/task/task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.obj
+.PHONY : libs/data_structures/matrix/task_matrix/task/task.c.obj
+
+libs/data_structures/matrix/task_matrix/task/task.i: libs/data_structures/matrix/task_matrix/task/task.c.i
+.PHONY : libs/data_structures/matrix/task_matrix/task/task.i
+
+# target to preprocess a source file
+libs/data_structures/matrix/task_matrix/task/task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.i
+.PHONY : libs/data_structures/matrix/task_matrix/task/task.c.i
+
+libs/data_structures/matrix/task_matrix/task/task.s: libs/data_structures/matrix/task_matrix/task/task.c.s
+.PHONY : libs/data_structures/matrix/task_matrix/task/task.s
+
+# target to generate assembly for a file
+libs/data_structures/matrix/task_matrix/task/task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.s
+.PHONY : libs/data_structures/matrix/task_matrix/task/task.c.s
+
 libs/data_structures/vector/test_vector_void/test_vector_void.obj: libs/data_structures/vector/test_vector_void/test_vector_void.c.obj
 .PHONY : libs/data_structures/vector/test_vector_void/test_vector_void.obj
 
@@ -264,6 +288,9 @@ help:
 	@echo ... libs/data_structures/matrix/matrix_t/matrix.obj
 	@echo ... libs/data_structures/matrix/matrix_t/matrix.i
 	@echo ... libs/data_structures/matrix/matrix_t/matrix.s
+	@echo ... libs/data_structures/matrix/task_matrix/task/task.obj
+	@echo ... libs/data_structures/matrix/task_matrix/task/task.i
+	@echo ... libs/data_structures/matrix/task_matrix/task/task.s
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.obj
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.i
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.s

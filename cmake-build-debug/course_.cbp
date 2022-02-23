@@ -165,8 +165,21 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h">
 			<Option target="course_"/>
-			<Option target="data_structures"/>
 			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/task_matrix/task/task.c">
+			<Option target="course_"/>
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h">
+			<Option target="course_"/>
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/task_matrix/test_task/test_task.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/matrix/task_matrix/test_task/test_task.h">
+			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.c">
 			<Option target="data_structures"/>

@@ -177,6 +177,54 @@ matrix/matrix_t/matrix.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.s
 .PHONY : matrix/matrix_t/matrix.c.s
 
+matrix/task_matrix/task/task.obj: matrix/task_matrix/task/task.c.obj
+.PHONY : matrix/task_matrix/task/task.obj
+
+# target to build an object file
+matrix/task_matrix/task/task.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/task/task.c.obj
+.PHONY : matrix/task_matrix/task/task.c.obj
+
+matrix/task_matrix/task/task.i: matrix/task_matrix/task/task.c.i
+.PHONY : matrix/task_matrix/task/task.i
+
+# target to preprocess a source file
+matrix/task_matrix/task/task.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/task/task.c.i
+.PHONY : matrix/task_matrix/task/task.c.i
+
+matrix/task_matrix/task/task.s: matrix/task_matrix/task/task.c.s
+.PHONY : matrix/task_matrix/task/task.s
+
+# target to generate assembly for a file
+matrix/task_matrix/task/task.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/task/task.c.s
+.PHONY : matrix/task_matrix/task/task.c.s
+
+matrix/task_matrix/test_task/test_task.obj: matrix/task_matrix/test_task/test_task.c.obj
+.PHONY : matrix/task_matrix/test_task/test_task.obj
+
+# target to build an object file
+matrix/task_matrix/test_task/test_task.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/test_task/test_task.c.obj
+.PHONY : matrix/task_matrix/test_task/test_task.c.obj
+
+matrix/task_matrix/test_task/test_task.i: matrix/task_matrix/test_task/test_task.c.i
+.PHONY : matrix/task_matrix/test_task/test_task.i
+
+# target to preprocess a source file
+matrix/task_matrix/test_task/test_task.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/test_task/test_task.c.i
+.PHONY : matrix/task_matrix/test_task/test_task.c.i
+
+matrix/task_matrix/test_task/test_task.s: matrix/task_matrix/test_task/test_task.c.s
+.PHONY : matrix/task_matrix/test_task/test_task.s
+
+# target to generate assembly for a file
+matrix/task_matrix/test_task/test_task.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/test_task/test_task.c.s
+.PHONY : matrix/task_matrix/test_task/test_task.c.s
+
 matrix/test_matrix/test_matrix.obj: matrix/test_matrix/test_matrix.c.obj
 .PHONY : matrix/test_matrix/test_matrix.obj
 
@@ -336,6 +384,12 @@ help:
 	@echo ... matrix/matrix_t/matrix.obj
 	@echo ... matrix/matrix_t/matrix.i
 	@echo ... matrix/matrix_t/matrix.s
+	@echo ... matrix/task_matrix/task/task.obj
+	@echo ... matrix/task_matrix/task/task.i
+	@echo ... matrix/task_matrix/task/task.s
+	@echo ... matrix/task_matrix/test_task/test_task.obj
+	@echo ... matrix/task_matrix/test_task/test_task.i
+	@echo ... matrix/task_matrix/test_task/test_task.s
 	@echo ... matrix/test_matrix/test_matrix.obj
 	@echo ... matrix/test_matrix/test_matrix.i
 	@echo ... matrix/test_matrix/test_matrix.s

@@ -31,6 +31,10 @@ typedef struct {
  */
 matrix_t get_mem_matrix(int nRows, int nCols);
 
+matrix_t create_matrix_from_array(const int *a, int nRows, int nCols);
+
+matrix_t *create_array_of_matrix_from_array(const int *values, int nRows, int nCols, int nMatrices);
+
 matrix_f_t get_mem_matrix_f(const int nRows, const int nCols);
 
 matrix_t *get_mem_array_of_matrices(int nMatrices, int nRows, int nCols);
@@ -75,6 +79,10 @@ bool is_symmetric_matrix(matrix_t m);
 
 bool is_mutually_inverse_matrices(matrix_t m1, matrix_t m2);
 
+bool are_two_matrices_equal(matrix_t (m1), matrix_t (m2));
+
+bool is_mutually_inverse_matrices (matrix_t m1, matrix_t m2);
+
 void transpose_square_matrix(matrix_t m);
 
 position_t get_min_value_pos(matrix_t m);
@@ -108,6 +116,8 @@ int count_non_descending_rows_matrices(matrix_t *ms, int nMatrix);
 void print_matrices_with_max_zero_rows(matrix_t *ms, int nMatrix);
 
 void print_matrices_with_min_abs(matrix_f_t *ms, int nMatrix);
+
+int count_zero_rows(matrix_t m);
 
 int get_n_special_element2(matrix_t (m));
 

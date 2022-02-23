@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "Z:/course_/libs/data_structures/bitset/bitset.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
   "Z:/course_/libs/data_structures/matrix/matrix_t/matrix.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.obj"
+  "Z:/course_/libs/data_structures/matrix/task_matrix/task/task.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/task/task.c.obj"
+  "Z:/course_/libs/data_structures/matrix/task_matrix/test_task/test_task.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/test_task/test_task.c.obj"
   "Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/test_matrix/test_matrix.c.obj"
   "Z:/course_/libs/data_structures/ordered_array_set/ordered_array_set.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj"
   "Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj"

@@ -30,3 +30,25 @@ stdbool.h
 Z:/course_/libs/algorithms/array/array.h
 -
 
+Z:/course_/libs/data_structures/matrix/task_matrix/task/task.c
+task.h
+Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h
+Z:/course_/libs/algorithms/array/array.h
+-
+Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+-
+Z:/course_/libs/algorithms/array/array.h
+-
+
+Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h
+
+Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.c
+test_matrix.h
+Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.h
+
+Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.h
+assert.h
+-
+../matrix_t/matrix.h
+Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+
