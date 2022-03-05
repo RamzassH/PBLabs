@@ -366,9 +366,45 @@ typedef struct {
     size_t size;
 }bagOfWords_t;
 
-bagOfWords_t get_bag_of_words(bagOfWords_t *bag, char *s) {
+int count_words(char *s) {
+    word_descriptor_t word;
+    int counter = 0;
+    char *begin = s;
+    while (get_word(begin, &word)) {
+        begin = (word).end;
+        ++counter;
+    }
 
+    return counter;
 }
+
+void get_bag_of_words(bagOfWords_t *bag, char *s) {
+    int nWords = count_words(s);
+    word_descriptor_t word_array[nWords];
+    (bag)->size = count_words(s);
+    char *begin = get_end_of_string(s);
+
+    for (register size_t i = 0; i < (bag)->size; ++i) {
+        word_descriptor_t word;
+        get_word_reverse(begin - 1, s, &word);
+        (bag)->words[i] = word;
+        begin = (word).begin;
+        for (; (word).end > (word).begin - 1; word.begin++){
+            printf("%c", *word.begin);
+        }
+        printf("\n");
+    }
+}
+
+void test_task7_default_case() {
+    char testString[] = "hello world allah acbar";
+    bagOfWords_t sobaka;
+    get_bag_of_words(&sobaka, testString);
+}
+void task7() {
+    test_task7_default_case();
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
