@@ -846,3 +846,6 @@ double get_vector_index_with_max_angle(matrix_t m, int *b) {
 
     return iMin;
 }
+
+
+

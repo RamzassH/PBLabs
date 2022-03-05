@@ -273,6 +273,78 @@ ordered_array_set/ordered_array_set.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.s
 .PHONY : ordered_array_set/ordered_array_set.c.s
 
+string_t/str_lib/string.obj: string_t/str_lib/string.c.obj
+.PHONY : string_t/str_lib/string.obj
+
+# target to build an object file
+string_t/str_lib/string.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/str_lib/string.c.obj
+.PHONY : string_t/str_lib/string.c.obj
+
+string_t/str_lib/string.i: string_t/str_lib/string.c.i
+.PHONY : string_t/str_lib/string.i
+
+# target to preprocess a source file
+string_t/str_lib/string.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/str_lib/string.c.i
+.PHONY : string_t/str_lib/string.c.i
+
+string_t/str_lib/string.s: string_t/str_lib/string.c.s
+.PHONY : string_t/str_lib/string.s
+
+# target to generate assembly for a file
+string_t/str_lib/string.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/str_lib/string.c.s
+.PHONY : string_t/str_lib/string.c.s
+
+string_t/tasks/tasks_and_tests.obj: string_t/tasks/tasks_and_tests.c.obj
+.PHONY : string_t/tasks/tasks_and_tests.obj
+
+# target to build an object file
+string_t/tasks/tasks_and_tests.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj
+.PHONY : string_t/tasks/tasks_and_tests.c.obj
+
+string_t/tasks/tasks_and_tests.i: string_t/tasks/tasks_and_tests.c.i
+.PHONY : string_t/tasks/tasks_and_tests.i
+
+# target to preprocess a source file
+string_t/tasks/tasks_and_tests.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.i
+.PHONY : string_t/tasks/tasks_and_tests.c.i
+
+string_t/tasks/tasks_and_tests.s: string_t/tasks/tasks_and_tests.c.s
+.PHONY : string_t/tasks/tasks_and_tests.s
+
+# target to generate assembly for a file
+string_t/tasks/tasks_and_tests.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.s
+.PHONY : string_t/tasks/tasks_and_tests.c.s
+
+string_t/test/test_string.obj: string_t/test/test_string.c.obj
+.PHONY : string_t/test/test_string.obj
+
+# target to build an object file
+string_t/test/test_string.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.obj
+.PHONY : string_t/test/test_string.c.obj
+
+string_t/test/test_string.i: string_t/test/test_string.c.i
+.PHONY : string_t/test/test_string.i
+
+# target to preprocess a source file
+string_t/test/test_string.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.i
+.PHONY : string_t/test/test_string.c.i
+
+string_t/test/test_string.s: string_t/test/test_string.c.s
+.PHONY : string_t/test/test_string.s
+
+# target to generate assembly for a file
+string_t/test/test_string.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.s
+.PHONY : string_t/test/test_string.c.s
+
 unordered_array_set/unordered_array_set.obj: unordered_array_set/unordered_array_set.c.obj
 .PHONY : unordered_array_set/unordered_array_set.obj
 
@@ -396,6 +468,15 @@ help:
 	@echo ... ordered_array_set/ordered_array_set.obj
 	@echo ... ordered_array_set/ordered_array_set.i
 	@echo ... ordered_array_set/ordered_array_set.s
+	@echo ... string_t/str_lib/string.obj
+	@echo ... string_t/str_lib/string.i
+	@echo ... string_t/str_lib/string.s
+	@echo ... string_t/tasks/tasks_and_tests.obj
+	@echo ... string_t/tasks/tasks_and_tests.i
+	@echo ... string_t/tasks/tasks_and_tests.s
+	@echo ... string_t/test/test_string.obj
+	@echo ... string_t/test/test_string.i
+	@echo ... string_t/test/test_string.s
 	@echo ... unordered_array_set/unordered_array_set.obj
 	@echo ... unordered_array_set/unordered_array_set.i
 	@echo ... unordered_array_set/unordered_array_set.s

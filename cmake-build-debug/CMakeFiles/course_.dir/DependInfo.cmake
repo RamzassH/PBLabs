@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "Z:/course_/libs/data_structures/matrix/matrix_t/matrix.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/matrix/matrix_t/matrix.c.obj"
   "Z:/course_/libs/data_structures/matrix/task_matrix/task/task.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.obj"
+  "Z:/course_/libs/data_structures/string_t/str_lib/string.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.obj"
+  "Z:/course_/libs/data_structures/string_t/test/test_string.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.obj"
   "Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/vector/test_vector_void/test_vector_void.c.obj"
   "Z:/course_/libs/data_structures/vector/vector_void/vector_void.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/vector/vector_void/vector_void.c.obj"
   "Z:/course_/main.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/main.c.obj"

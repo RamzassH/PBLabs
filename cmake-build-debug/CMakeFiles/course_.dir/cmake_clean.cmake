@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/course_.dir/libs/data_structures/matrix/matrix_t/matrix.c.obj"
   "CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.obj"
+  "CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.obj"
+  "CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.obj"
   "CMakeFiles/course_.dir/libs/data_structures/vector/test_vector_void/test_vector_void.c.obj"
   "CMakeFiles/course_.dir/libs/data_structures/vector/vector_void/vector_void.c.obj"
   "CMakeFiles/course_.dir/main.c.obj"

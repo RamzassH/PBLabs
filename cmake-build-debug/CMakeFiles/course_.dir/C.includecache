@@ -20,11 +20,23 @@ stdbool.h
 Z:/course_/libs/algorithms/array/array.h
 -
 
+Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h
+
+Z:/course_/libs/data_structures/matrix/task_matrix/test_task/test_task.h
+assert.h
+-
+../task/task.h
+Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h
+Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+-
+
 Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.h
 assert.h
 -
 ../matrix_t/matrix.h
 Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+
+Z:/course_/libs/data_structures/string_t/test/test_string.h
 
 Z:/course_/libs/data_structures/vector/test_vector/vector_test.h
 assert.h
@@ -61,4 +73,10 @@ libs/data_structures/vector/test_vector_void/test_vector_void.h
 Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h
 libs/data_structures/matrix/test_matrix/test_matrix.h
 Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.h
+libs/data_structures/matrix/task_matrix/task/task.h
+Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h
+libs/data_structures/matrix/task_matrix/test_task/test_task.h
+Z:/course_/libs/data_structures/matrix/task_matrix/test_task/test_task.h
+libs/data_structures/string_t/test/test_string.h
+Z:/course_/libs/data_structures/string_t/test/test_string.h
 

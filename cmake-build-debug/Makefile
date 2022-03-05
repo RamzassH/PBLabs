@@ -202,6 +202,54 @@ libs/data_structures/matrix/task_matrix/task/task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.s
 .PHONY : libs/data_structures/matrix/task_matrix/task/task.c.s
 
+libs/data_structures/string_t/str_lib/string.obj: libs/data_structures/string_t/str_lib/string.c.obj
+.PHONY : libs/data_structures/string_t/str_lib/string.obj
+
+# target to build an object file
+libs/data_structures/string_t/str_lib/string.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.obj
+.PHONY : libs/data_structures/string_t/str_lib/string.c.obj
+
+libs/data_structures/string_t/str_lib/string.i: libs/data_structures/string_t/str_lib/string.c.i
+.PHONY : libs/data_structures/string_t/str_lib/string.i
+
+# target to preprocess a source file
+libs/data_structures/string_t/str_lib/string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.i
+.PHONY : libs/data_structures/string_t/str_lib/string.c.i
+
+libs/data_structures/string_t/str_lib/string.s: libs/data_structures/string_t/str_lib/string.c.s
+.PHONY : libs/data_structures/string_t/str_lib/string.s
+
+# target to generate assembly for a file
+libs/data_structures/string_t/str_lib/string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.s
+.PHONY : libs/data_structures/string_t/str_lib/string.c.s
+
+libs/data_structures/string_t/test/test_string.obj: libs/data_structures/string_t/test/test_string.c.obj
+.PHONY : libs/data_structures/string_t/test/test_string.obj
+
+# target to build an object file
+libs/data_structures/string_t/test/test_string.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.obj
+.PHONY : libs/data_structures/string_t/test/test_string.c.obj
+
+libs/data_structures/string_t/test/test_string.i: libs/data_structures/string_t/test/test_string.c.i
+.PHONY : libs/data_structures/string_t/test/test_string.i
+
+# target to preprocess a source file
+libs/data_structures/string_t/test/test_string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.i
+.PHONY : libs/data_structures/string_t/test/test_string.c.i
+
+libs/data_structures/string_t/test/test_string.s: libs/data_structures/string_t/test/test_string.c.s
+.PHONY : libs/data_structures/string_t/test/test_string.s
+
+# target to generate assembly for a file
+libs/data_structures/string_t/test/test_string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.s
+.PHONY : libs/data_structures/string_t/test/test_string.c.s
+
 libs/data_structures/vector/test_vector_void/test_vector_void.obj: libs/data_structures/vector/test_vector_void/test_vector_void.c.obj
 .PHONY : libs/data_structures/vector/test_vector_void/test_vector_void.obj
 
@@ -291,6 +339,12 @@ help:
 	@echo ... libs/data_structures/matrix/task_matrix/task/task.obj
 	@echo ... libs/data_structures/matrix/task_matrix/task/task.i
 	@echo ... libs/data_structures/matrix/task_matrix/task/task.s
+	@echo ... libs/data_structures/string_t/str_lib/string.obj
+	@echo ... libs/data_structures/string_t/str_lib/string.i
+	@echo ... libs/data_structures/string_t/str_lib/string.s
+	@echo ... libs/data_structures/string_t/test/test_string.obj
+	@echo ... libs/data_structures/string_t/test/test_string.i
+	@echo ... libs/data_structures/string_t/test/test_string.s
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.obj
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.i
 	@echo ... libs/data_structures/vector/test_vector_void/test_vector_void.s

@@ -9,10 +9,12 @@ libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix_t/matrix.c.obj
  ../libs/data_structures/matrix/matrix_t/matrix.c \
  ../libs/data_structures/matrix/matrix_t/matrix.h
 libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/task/task.c.obj: \
+ ../libs/data_structures/matrix/task_matrix/task/task.c
+libs/data_structures/CMakeFiles/data_structures.dir/matrix/task_matrix/test_task/test_task.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/matrix/matrix_t/matrix.h \
- ../libs/data_structures/matrix/task_matrix/task/task.c \
- ../libs/data_structures/matrix/task_matrix/task/task.h
+ ../libs/data_structures/matrix/task_matrix/task/task.h \
+ ../libs/data_structures/matrix/task_matrix/test_task/test_task.c
 libs/data_structures/CMakeFiles/data_structures.dir/matrix/test_matrix/test_matrix.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/matrix/matrix_t/matrix.h \
@@ -22,6 +24,17 @@ libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_ar
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/ordered_array_set/ordered_array_set.c \
  ../libs/data_structures/ordered_array_set/ordered_array_set.h
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/str_lib/string.c.obj: \
+ ../libs/data_structures/string_t/str_lib/string.c \
+ ../libs/data_structures/string_t/str_lib/string.h
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj: \
+ ../libs/data_structures/string_t/str_lib/string.h \
+ ../libs/data_structures/string_t/tasks/task_manager.h \
+ ../libs/data_structures/string_t/tasks/tasks_and_tests.c
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.obj: \
+ ../libs/data_structures/string_t/str_lib/string.h \
+ ../libs/data_structures/string_t/test/test_string.c \
+ ../libs/data_structures/string_t/test/test_string.h
 libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/unordered_array_set/unordered_array_set.c \

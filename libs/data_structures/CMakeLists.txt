@@ -7,4 +7,4 @@ add_library(data_structures
         vector/vector_void/vector_void.c
         matrix/matrix_t/matrix.c
         matrix/test_matrix/test_matrix.c
-        matrix/task_matrix/task/task.c matrix/task_matrix/test_task/test_task.c matrix/task_matrix/test_task/test_task.h)
+        matrix/task_matrix/task/task.c matrix/task_matrix/test_task/test_task.c matrix/task_matrix/test_task/test_task.h string_t/str_lib/string.c string_t/str_lib/string.h string_t/test/test_string.c string_t/test/test_string.h string_t/tasks/tasks_and_tests.c string_t/tasks/task_manager.h)
