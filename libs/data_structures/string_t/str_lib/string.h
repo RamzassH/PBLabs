@@ -29,6 +29,8 @@ int strcmp(const char *lhs, const char *rhs);
 
 char *copy(const char *beginSource, const char *endSource, char *beginDestination);
 
+char *copy_reverse(const char *beginSource, const char *endSource, char *beginDestination);
+
 char *copy_if(const char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
 
 char *copy_if_reverse(const char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));

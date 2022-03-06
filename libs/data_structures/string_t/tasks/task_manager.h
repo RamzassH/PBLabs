@@ -41,4 +41,8 @@ void task7();
 
 void task8();
 
+void task9();
+
+void task10();
+
 #endif

@@ -121,9 +121,33 @@ int get_word(char *beginSearch, word_descriptor_t *word) {
     return 1;
 }
 
+//int get_word_reverse(char *rbegin, char *rend, word_descriptor_t *word) {
+//    (word)->end = find_non_space_reverse(rbegin, rend);
+//    if((word)->begin == rend) {
+//        return 0;
+//    }
+//
+//    (word)->begin = find_space_reverse((word)->end, rend) + 1;
+//
+//    return 1;
+//}
+
+
+//int get_word_reverse(char *rbegin, char *rend, word_descriptor_t *word) {
+//    (word)->end = find_non_space_reverse(rbegin, rend) + 1;
+//
+//    (word)->begin = find_space_reverse((word)->end - 1, rend);
+//
+//    if ((word)->end == rend) {
+//        return 0;
+//    }
+//
+//    return 1;
+//}
+
 int get_word_reverse(char *rbegin, char *rend, word_descriptor_t *word) {
-    (word)->end = find_non_space_reverse(rbegin, rend);
-    if((word)->begin == rend) {
+    (word)->end = find_non_space_reverse(rbegin, rend) - 1;
+    if((word)->end == rend) {
         return 0;
     }
 
@@ -281,7 +305,6 @@ void test_task5_default_case()
     char s1[] = "hello world";
     replace(s1, "world", "hello");
 
-    puts(s1);
     ASSERT_STRING("hello hello", s1);
 }
 
@@ -397,12 +420,12 @@ void get_bag_of_words(bagOfWords_t *bag, char *s) {
 }
 
 void test_task7_default_case() {
-    char testString[] = "hello world allah acbar";
+    char testString[] = "hello world";
     bagOfWords_t sobaka;
     get_bag_of_words(&sobaka, testString);
 }
 void task7() {
-    test_task7_default_case();
+//    test_task7_default_case();
 }
 
 
@@ -431,3 +454,121 @@ void test_task8() {
 void task8() {
     test_task8();
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void split_strings(char *s1, char *s2, char *stringToSplit) {
+    word_descriptor_t word1, word2;
+    int isW1Found, isW2Found;
+    char *beginSearch1 = s1, *beginSearch2 = s2, *beginSearch3 = stringToSplit;
+
+
+    while ((isW1Found = get_word(beginSearch1, &word1),
+            isW2Found = get_word(beginSearch2, &word2),
+            isW1Found || isW2Found)) {
+
+        if (isW1Found) {
+            beginSearch3 = copy(word1.begin, word1.end, beginSearch3);
+            *(beginSearch3) = ' ';
+            beginSearch3++;
+            beginSearch1 = word1.end;
+        }
+
+        if (isW2Found) {
+            beginSearch3 = copy(word2.begin, word2.end, beginSearch3);
+            *(beginSearch3) = ' ';
+            beginSearch3++;
+            beginSearch2 = word2.end;
+        }
+    }
+    *(beginSearch3 - 1) = '\0';
+}
+
+void test_task9_default_case() {
+    char testString1[] = "hello I'm";
+    char testString2[] = "world here";
+    char testString3[21];
+
+    split_strings(testString1, testString2, testString3);
+
+    char expectedString1[] = "hello world I'm here";
+    ASSERT_STRING(expectedString1, testString3);
+}
+
+void test_task9_is_first_word_less () {
+    char testString1[] = "hello";
+    char testString2[] = "world here";
+    char testString3[17];
+
+    split_strings(testString1, testString2, testString3);
+
+    char expectedString1[] = "hello world here";
+    ASSERT_STRING(expectedString1, testString3);
+}
+void test_task9_is_second_word_less () {
+    char testString1[] = "hello here";
+    char testString2[] = "I'm";
+    char testString3[17];
+
+    split_strings(testString1, testString2, testString3);
+
+    char expectedString1[] = "hello I'm here";
+    ASSERT_STRING(expectedString1, testString3);
+}
+
+void task9() {
+    test_task9_default_case();
+    test_task9_is_first_word_less();
+    test_task9_is_second_word_less();
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int is_non_space(char s) {
+    return !isspace(s);
+}
+
+void reverse_string_order(char *stringToReverse) {
+    char *endStringBuffer = copy(stringToReverse, get_end_of_string(stringToReverse), _stringBuffer);
+
+    word_descriptor_t word;
+
+    char *beginCopy = stringToReverse;
+    while (get_word_reverse(endStringBuffer, _stringBuffer, &word)) {
+
+        beginCopy = copy_if((word).begin - 1, (word).end + (*(word).end != '\0'), beginCopy, is_non_space);
+
+        *beginCopy = ' ';
+        beginCopy++;
+        endStringBuffer = (word).begin - 1;
+    }
+
+    *(beginCopy - 1) = '\0';
+}
+
+void test_get_word_reverse() {
+    char s[] = "da be ru";
+    word_descriptor_t word;
+    int i = 0;
+    char *begin = get_end_of_string(s);
+    while (i < 3) {
+        get_word_reverse(begin, s, &word);
+        i++;
+        begin = (word).begin - 1;
+    }
+
+}
+
+void test_task10_default_case() {
+    char testString[] = "world hello allo darova";
+    char expectedString[] = "darova allo hello world";
+
+    reverse_string_order(testString);
+
+    ASSERT_STRING(expectedString, testString);
+}
+
+void task10() {
+    test_get_word_reverse();
+    test_task10_default_case();
+}
+

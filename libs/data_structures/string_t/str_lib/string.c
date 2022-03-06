@@ -46,13 +46,14 @@ char *find_non_space_reverse(char *rbegin, const char *rend) {
             rbegin--;
         }
 
-        return rbegin;
+        return ++rbegin;
 }
 
 char *find_space_reverse(char *rbegin, const char *rend) {
     while (isspace(*rbegin) == 0 && rbegin != rend) {
         rbegin--;
     }
+
 
     return rbegin;
 }
