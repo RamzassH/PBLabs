@@ -572,3 +572,63 @@ void task10() {
     test_task10_default_case();
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void print_word(char *begin, const char *end) {
+    for ( ; begin < end ; ++begin) {
+        printf("%c", *begin);
+    }
+}
+
+void print_word_before_word_with_a(char *s) {
+    if (find (s, get_end_of_string(s), 'a') == get_end_of_string(s)) {
+        printf("string not contains A\n");
+    }
+
+    word_descriptor_t currentWord;
+    get_word(s, &currentWord);
+    if (find(currentWord.begin, currentWord.end, 'a') != currentWord.end) {
+        printf("first word contains A\n");
+        return;
+    }
+
+    word_descriptor_t nextWord;
+
+    while(get_word(currentWord.end, &nextWord)) {
+        if (find(nextWord.begin, nextWord.end, 'a') != nextWord.end) {
+            print_word(currentWord.begin, currentWord.end);
+            printf("\n");
+            return;
+        }
+        else {
+            currentWord.begin = nextWord.begin;
+            currentWord.end = nextWord.end;
+        }
+    }
+}
+
+void test_task11_default_case() {
+    char s1[] = "allo hello privet";
+
+    print_word_before_word_with_a(s1);
+}
+
+void test_task11_default_case2() {
+    char s1[] = "hello allo privet";
+
+    print_word_before_word_with_a(s1);
+}
+
+void test_task11_default_case3() {
+    char s1[] = "hello privet";
+
+    print_word_before_word_with_a(s1);
+}
+
+void task11() {
+    test_task11_default_case();
+    test_task11_default_case2();
+    test_task11_default_case3();
+}
+
+

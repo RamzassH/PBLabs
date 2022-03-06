@@ -45,4 +45,6 @@ void task9();
 
 void task10();
 
+void task11();
+
 #endif
