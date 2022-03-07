@@ -254,7 +254,7 @@ void task4() {
 //    return (*(w1).begin == ' ' || *(w1).begin == '\0') && (*(w2).begin == ' ' || *(w2).begin == '\0');
 //}
 
-int wordsAreEqual(word_descriptor_t w1, word_descriptor_t w2) {
+int are_words_equal(word_descriptor_t w1, word_descriptor_t w2) {
     while (*(w2).begin == *(w1).begin && (w1).begin != w1.end && (w2).begin != w2.end) {
         (w1).begin++;
         (w2).begin++;
@@ -283,7 +283,7 @@ void replace(char *source, char *wordToReplace, char *newWord) {
 
     word_descriptor_t word;
     while (get_word(readPtr, &word) && *recPtr != '\0') {
-        if (wordsAreEqual(word, wordToReplace_t)) {
+        if (are_words_equal(word, wordToReplace_t)) {
             recPtr = copy(newWord_t.begin, newWord_t.end, recPtr);
         } else {
             recPtr = copy(word.begin, word.end, recPtr);
@@ -404,39 +404,15 @@ typedef struct {
     size_t size;
 }bagOfWords_t;
 
-int count_words(char *s) {
-    word_descriptor_t word;
-    int counter = 0;
-    char *begin = s;
-    while (get_word(begin, &word)) {
-        begin = (word).end;
-        ++counter;
-    }
-
-    return counter;
-}
-
-//void get_bag_of_words(bagOfWords_t *bag, char *s) {
-//    int nWords = count_words(s);
-//    word_descriptor_t word_array[nWords];
-//    (bag)->size = count_words(s);
-//    char *begin = get_end_of_string(s);
-//
-//    for (register size_t i = 0; i <= (bag)->size; ++i) {
-//        word_descriptor_t word;
-//        get_word_reverse(begin - 1, s, &word);
-//        (bag)->words[i] = word;
-//        begin = (word).begin;
-//    }
-//}
 
 void get_bag_of_words(bagOfWords_t *bag, char *s) {
-    bag->size = 0;
-    word_descriptor_t w;
+    (bag)->size = 0;
+    word_descriptor_t word;
 
-    while (get_word(s, &w)) {
-        bag->words[bag->size++] = w;
-        s = w.end;
+    while (get_word(s, &word)) {
+        (bag)->words[(bag)->size++] = word;
+        s = word.end;
+//        print_word((word.begin), (word).end);
     }
 }
 
@@ -566,6 +542,17 @@ void reverse_string_order(char *stringToReverse) {
     *(beginCopy - 1) = '\0';
 }
 
+//void reverse_string_order(char*stringReverse) {
+//    bagOfWords_t bag;
+//    get_bag_of_words(&bag, stringReverse);
+//
+//    while ((bag).size--) {
+//        stringReverse = copy((bag).words[(bag).size - 1].begin, (bag).words[(bag).size - 1].end,stringReverse);
+//        *stringReverse = ' ';
+//        stringReverse++;
+//    }
+//}
+
 void test_get_word_reverse() {
     char s[] = "da be ru";
     word_descriptor_t word;
@@ -594,12 +581,6 @@ void task10() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void print_word(char *begin, const char *end) {
-    for ( ; begin < end ; ++begin) {
-        printf("%c", *begin);
-    }
-}
 
 void print_word_before_word_with_a(char *s) {
     if (find (s, get_end_of_string(s), 'a') == get_end_of_string(s)) {
@@ -665,15 +646,15 @@ word_descriptor_t last_of_first_in_second(char *s1, char *s2) {
     bagOfWords_t bag2;
     get_bag_of_words(&bag2, s2);
 
-    word_descriptor_t w;
-    for (int j = 0; j < bag1.size; j++) {
-        for (int i = 0; i < bag2.size; i++) {
-            if (strcmp(bag1.words[j].begin, bag2.words[i].begin) == 0) {
-                w.begin = bag1.words[j].begin, w.end = bag1.words[j].end;
+    word_descriptor_t word;
+    for (register size_t i = 0; i < (bag1).size; ++i) {
+        for (register size_t J = 0; J < (bag2).size; ++J) {
+            if (strcmp((bag1).words[i].begin, (bag2).words[i].begin) == 0) {
+                (word).begin = (bag1).words[i].begin, (word).end = (bag1).words[i].end;
             }
         }
     }
-    return w;
+    return word;
 }
 
 void test_task12_last_of_first_in_second_default_case() {
@@ -707,7 +688,7 @@ void task12() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int are_words_unique(char *s1) {
+int is_string_contains_same_words(char *s1) {
     bagOfWords_t bag;
     get_bag_of_words(&bag, s1);
 
@@ -717,7 +698,7 @@ int are_words_unique(char *s1) {
     while (currentWord < endWord) {
         word_descriptor_t *w = currentWord + 1;
         while (w <= endWord) {
-            if (wordsAreEqual(*currentWord, *w)) {
+            if (are_words_equal(*currentWord, *w)) {
                 return 1;
             }
             w++;
@@ -731,19 +712,19 @@ int are_words_unique(char *s1) {
 void test_task13_default_case() {
     char testString1[] = "hello world hello";
 
-    assert(are_words_unique(testString1) == 1);
+    assert(is_string_contains_same_words(testString1) == 1);
 }
 
 void test_task13_non_contains_unique_word() {
     char testString1[] = "hola amigos";
 
-    assert(are_words_unique(testString1) == 0);
+    assert(is_string_contains_same_words(testString1) == 0);
 }
 
 void test_task13_empty_string() {
     char testString1[] = "    ";
 
-    assert(are_words_unique(testString1) == 0);
+    assert(is_string_contains_same_words(testString1) == 0);
 }
 
 void task13() {
@@ -754,4 +735,154 @@ void task13() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+void task14();
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void get_string_without_last_word_like(char *defString) {
+    word_descriptor_t currentWord, lastWord;
+
+    char *endBuff = copy(defString, get_end_of_string(defString), _stringBuffer);
+    *endBuff = '\0';
+
+    if (!getWordRevers(endBuff - 1, _stringBuffer - 1, &lastWord)) {
+        return;
+    }
+
+    char *beginBufferPtr = _stringBuffer;
+    char *endStringPtr = defString;
+
+    while (get_word(beginBufferPtr, &currentWord)) {
+        if (!are_words_equal(lastWord, currentWord)) {
+            endStringPtr = copy(currentWord.begin, currentWord.end, endStringPtr);
+            *endStringPtr = ' ';
+            endStringPtr++;
+        }
+
+        beginBufferPtr = currentWord.end;
+    }
+
+    *(endStringPtr - 1) = '\0';
+}
+
+void test_task15_default_case() {
+    char testString[] = "hello world there is war world";
+    char expectedString[] = "hello there is war";
+
+    get_string_without_last_word_like(testString);
+
+    ASSERT_STRING(expectedString, testString);
+}
+
+void task15() {
+    test_task15_default_case();
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void task16();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void task17();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void add_words_to_less_string_(bagOfWords_t *greaterString, bagOfWords_t *lessString) {
+
+    size_t difference = (greaterString)->size - (lessString)->size;
+    char *endOfLessString = (lessString)->words[(lessString)->size - 1].end;
+    *endOfLessString = ' ';
+    *endOfLessString++;
+    char *endOfGreaterString = (greaterString)->words[(greaterString)->size - 1].end;
+
+    size_t wordNum = (greaterString)->size - 1;
+    word_descriptor_t wordToCopy;
+    while (difference--) {
+        get_word_reverse(endOfGreaterString, (greaterString)->words[0].begin, &wordToCopy);
+        endOfGreaterString = (greaterString)->words[--wordNum].end;
+
+        endOfLessString = copy_if((wordToCopy).begin - 1, (wordToCopy).end + (*(wordToCopy).end != '\0'),
+                                  endOfLessString, is_non_space);
+        *endOfLessString = ' ';
+        endOfLessString++;
+    }
+    *(endOfLessString - 1) = '\0';
+}
+
+void add_words_to_less_string(char *s1, char *s2) {
+    bagOfWords_t bag1;
+    get_bag_of_words(&bag1, s1);
+
+    bagOfWords_t bag2;
+    get_bag_of_words(&bag2, s2);
+
+    if ((bag1).size > (bag2).size) {
+        add_words_to_less_string_((&bag1), (&bag2));
+    } else if ((bag1).size < (bag2).size) {
+        add_words_to_less_string_((&bag2), (&bag1));
+    }
+}
+
+void test_task18_default_case() {
+    char testString1[] = "allo privet";
+    char testString2[] = "allo privet dela kak";
+
+    add_words_to_less_string(testString1, testString2);
+
+    char expectedString[] = "allo privet kak dela";
+    ASSERT_STRING(expectedString, testString1);
+}
+
+void test_task18_same_strings() {
+    char testString1[] = "allo privet";
+    char testString2[] = "allo privet";
+
+    add_words_to_less_string(testString1, testString2);
+
+    char expectedString[] = "allo privet";
+    ASSERT_STRING(expectedString, testString1);
+}
+
+void task18() {
+    test_task18_default_case();
+    test_task18_same_strings();
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int is_string_contains_every_symbol(char *s1, word_descriptor_t *word) {
+    char *endStringPtr = get_end_of_string(s1) - 1;
+    while ((word)->begin < (word)->end) {
+        if(*find(s1, endStringPtr, *(word)->begin) != *(word)->begin) {
+            return 0;
+        }
+        ++(word)->begin;
+    }
+    return 1;
+}
+
+void test_task19_default_case() {
+    char testString1[] = "hello world";
+    char testString2[] = "dell";
+
+    word_descriptor_t word;
+    get_word(testString2, &word);
+
+    assert(is_string_contains_every_symbol(testString1, &word) == 1);
+}
+
+void test_task19_is_non_contain_symbol() {
+    char testString1[] = "hello world";
+    char testString2[] = "dall";
+
+    word_descriptor_t word;
+    get_word(testString2, &word);
+
+    assert(is_string_contains_every_symbol(testString1, &word) == 0);
+}
+
+void task19() {
+    test_task19_default_case();
+    test_task19_is_non_contain_symbol();
+}

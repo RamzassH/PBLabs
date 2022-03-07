@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <memory.h>
 #include <assert.h>
+#include <stdio.h>
 
 size_t strlen(const char *beginOfString) {
     const char *endOfString = beginOfString;
@@ -91,4 +92,10 @@ char *copy_if_reverse(const char *rbeginSource, const char *rendSource, char *be
     }
 
     return beginDestination;
+}
+
+void print_word(char *begin, const char *end) {
+    for ( ; begin < end ; ++begin) {
+        printf("%c", *begin);
+    }
 }

@@ -4,6 +4,7 @@
 #include "libs/data_structures/matrix/task_matrix/task/task.h"
 #include "libs/data_structures/matrix/task_matrix/test_task/test_task.h"
 #include "libs/data_structures/string_t/test/test_string.h"
+#include "libs/data_structures/string_t/tasks/task_manager.h"
 
 
 int main() {
@@ -21,4 +22,7 @@ int main() {
     task11();
     task12();
     task13();
+    task15();
+    task18();
+    task19();
 }

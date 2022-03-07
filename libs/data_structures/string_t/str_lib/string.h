@@ -35,4 +35,6 @@ char *copy_if(const char *beginSource, const char *endSource, char *beginDestina
 
 char *copy_if_reverse(const char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
+void print_word(char *begin, const char *end);
+
 #endif
