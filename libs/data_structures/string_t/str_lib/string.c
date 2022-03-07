@@ -54,7 +54,6 @@ char *find_space_reverse(char *rbegin, const char *rend) {
         rbegin--;
     }
 
-
     return rbegin;
 }
 
