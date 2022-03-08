@@ -67,12 +67,12 @@ void remove_extra_spaces(char *s) {
     while (*s !='\0') {
         if (isspace(*posToWrite) && isspace(*s)){
             *posToWrite = ' ';
-        }
-        else{
+        } else {
             *(++posToWrite) = *s;
         }
         s++;
     }
+
     *(++posToWrite) = '\0';
 }
 
@@ -106,10 +106,6 @@ typedef struct{
     char *end;
 } word_descriptor_t;
 
-int true() {
-    return 1;
-}
-
 int get_word(char *beginSearch, word_descriptor_t *word) {
     (word)->begin = find_non_space(beginSearch);
     if (*(word)->begin == '\0') {
@@ -120,30 +116,6 @@ int get_word(char *beginSearch, word_descriptor_t *word) {
 
     return 1;
 }
-
-//int get_word_reverse(char *rbegin, char *rend, word_descriptor_t *word) {
-//    (word)->end = find_non_space_reverse(rbegin, rend);
-//    if((word)->begin == rend) {
-//        return 0;
-//    }
-//
-//    (word)->begin = find_space_reverse((word)->end, rend) + 1;
-//
-//    return 1;
-//}
-
-
-//int get_word_reverse(char *rbegin, char *rend, word_descriptor_t *word) {
-//    (word)->end = find_non_space_reverse(rbegin, rend) + 1;
-//
-//    (word)->begin = find_space_reverse((word)->end - 1, rend);
-//
-//    if ((word)->end == rend) {
-//        return 0;
-//    }
-//
-//    return 1;
-//}
 
 int get_word_reverse(char *rbegin, char *rend, word_descriptor_t *word) {
     (word)->end = find_non_space_reverse(rbegin, rend) - 1;
@@ -202,6 +174,7 @@ void task3() {
 
 char digits_to_spaces(char *stringBegin) {
     char *endSource = get_end_of_string(stringBegin);
+
     char *endStringBuffer = copy(stringBegin, endSource, _stringBuffer);
     *endStringBuffer = '\0';
 
@@ -245,15 +218,6 @@ void task4() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//int areWordsEqual(word_descriptor_t w1,word_descriptor_t w2) {
-//    while ((w1).begin != (w2).end && (w2).begin != (w2).end && *(w1).begin != *(w2).begin) {
-//        (w1).begin++;
-//        (w2).begin++;
-//    }
-//
-//    return (*(w1).begin == ' ' || *(w1).begin == '\0') && (*(w2).begin == ' ' || *(w2).begin == '\0');
-//}
-
 int are_words_equal(word_descriptor_t w1, word_descriptor_t w2) {
     while (*(w2).begin == *(w1).begin && (w1).begin != w1.end && (w2).begin != w2.end) {
         (w1).begin++;
@@ -270,8 +234,7 @@ void replace(char *source, char *wordToReplace, char *newWord) {
     word_descriptor_t wordToReplace_t = {wordToReplace, wordToReplace + wordToReplaceSize};
     word_descriptor_t newWord_t = {newWord, newWord + newWordSize};
 
-    char *readPtr;
-    char *recPtr;
+    char *readPtr, *recPtr;
     if (wordToReplaceSize >= newWordSize) {
         readPtr = source;
         recPtr = source;
@@ -284,9 +247,9 @@ void replace(char *source, char *wordToReplace, char *newWord) {
     word_descriptor_t word;
     while (get_word(readPtr, &word) && *recPtr != '\0') {
         if (are_words_equal(word, wordToReplace_t)) {
-            recPtr = copy(newWord_t.begin, newWord_t.end, recPtr);
+            recPtr = copy((newWord_t).begin, (newWord_t).end, recPtr);
         } else {
-            recPtr = copy(word.begin, word.end, recPtr);
+            recPtr = copy((word).begin, (word).end, recPtr);
         }
 
         if (*recPtr != '\0') {
@@ -294,7 +257,7 @@ void replace(char *source, char *wordToReplace, char *newWord) {
         }
 
         ++recPtr;
-        readPtr = word.end;
+        readPtr = (word).end;
     }
 
     *(--recPtr) = '\0';
@@ -328,7 +291,7 @@ int word_cmp(word_descriptor_t w1, word_descriptor_t w2) {
         (w2).begin++;
     }
     if (*(w2).begin == '\0') {
-        return -1;
+        return 0;
     }
 
     return *(w1).begin - *(w2).begin;
@@ -456,6 +419,14 @@ void task8() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+char *copy_if_found(char *begin, char *end, char *beginSearch) {
+    beginSearch = copy(begin, end, beginSearch);
+    *(beginSearch) = ' ';
+    ++beginSearch;
+
+    return beginSearch;
+}
+
 void split_strings(char *s1, char *s2, char *stringToSplit) {
     word_descriptor_t word1, word2;
     int isW1Found, isW2Found;
@@ -467,16 +438,12 @@ void split_strings(char *s1, char *s2, char *stringToSplit) {
             isW1Found || isW2Found)) {
 
         if (isW1Found) {
-            beginSearch3 = copy(word1.begin, word1.end, beginSearch3);
-            *(beginSearch3) = ' ';
-            beginSearch3++;
+            beginSearch3 = copy_if_found(word1.begin, word1.end, beginSearch3);
             beginSearch1 = word1.end;
         }
 
         if (isW2Found) {
-            beginSearch3 = copy(word2.begin, word2.end, beginSearch3);
-            *(beginSearch3) = ' ';
-            beginSearch3++;
+            beginSearch3 = copy_if_found(word2.begin, word2.end, beginSearch3);
             beginSearch2 = word2.end;
         }
     }
@@ -526,46 +493,38 @@ int is_non_space(char s) {
     return !isspace(s);
 }
 
-void reverse_string_order(char *stringToReverse) {
-    char *endStringBuffer = copy(stringToReverse, get_end_of_string(stringToReverse), _stringBuffer);
+//void reverse_string_order(char *stringToReverse) {
+//    char *endStringBuffer = copy(stringToReverse, get_end_of_string(stringToReverse), _stringBuffer);
+//
+//    word_descriptor_t word;
+//
+//    char *beginCopy = stringToReverse;
+//    while (get_word_reverse(endStringBuffer, _stringBuffer, &word)) {
+//
+//        beginCopy = copy_if((word).begin - 1, (word).end + (*(word).end != '\0'), beginCopy, is_non_space);
+//
+//        *beginCopy = ' ';
+//        beginCopy++;
+//        endStringBuffer = (word).begin - 1;
+//    }
+//
+//    *(beginCopy - 1) = '\0';
+//}
 
-    word_descriptor_t word;
+void reverse_string_order(char*stringToReverse) {
+    copy(stringToReverse, get_end_of_string(stringToReverse), _stringBuffer);
+
+    bagOfWords_t bag;
+    get_bag_of_words(&bag, _stringBuffer);
 
     char *beginCopy = stringToReverse;
-    while (get_word_reverse(endStringBuffer, _stringBuffer, &word)) {
-
-        beginCopy = copy_if((word).begin - 1, (word).end + (*(word).end != '\0'), beginCopy, is_non_space);
-
+    while ((bag).size--) {
+        beginCopy = copy((bag).words[(bag).size].begin, (bag).words[(bag).size].end , beginCopy);
         *beginCopy = ' ';
         beginCopy++;
-        endStringBuffer = (word).begin - 1;
     }
 
     *(beginCopy - 1) = '\0';
-}
-
-//void reverse_string_order(char*stringReverse) {
-//    bagOfWords_t bag;
-//    get_bag_of_words(&bag, stringReverse);
-//
-//    while ((bag).size--) {
-//        stringReverse = copy((bag).words[(bag).size - 1].begin, (bag).words[(bag).size - 1].end,stringReverse);
-//        *stringReverse = ' ';
-//        stringReverse++;
-//    }
-//}
-
-void test_get_word_reverse() {
-    char s[] = "da be ru";
-    word_descriptor_t word;
-    int i = 0;
-    char *begin = get_end_of_string(s);
-    while (i < 3) {
-        get_word_reverse(begin, s, &word);
-        i++;
-        begin = (word).begin - 1;
-    }
-
 }
 
 void test_task10_default_case() {
@@ -578,7 +537,6 @@ void test_task10_default_case() {
 }
 
 void task10() {
-    test_get_word_reverse();
     test_task10_default_case();
 }
 
@@ -737,7 +695,73 @@ void task13() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void task14();
+int compare_char(const void *a, const void *b) {
+    char arg1 = *(const char *) a;
+    char arg2 = *(const char *) b;
+
+    if (arg1 < arg2){
+        return -1;
+    } else if (arg1 > arg2) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+void letters_sort(word_descriptor_t* word) {
+    size_t nLetters = (word)->end - (word)->begin;
+    qsort((word)->begin, nLetters, sizeof(char), compare_char);
+}
+
+int is_word_contains_same_letters_words_pair(char *s) {
+    copy(s, get_end_of_string(s), _stringBuffer);
+
+    word_descriptor_t wordToSort;
+    char *bufferPtr = _stringBuffer;
+
+    while (get_word(bufferPtr, &wordToSort)) {
+        letters_sort(&wordToSort);
+        bufferPtr = (wordToSort).end;
+    }
+
+    bagOfWords_t bag;
+    get_bag_of_words(&bag, _stringBuffer);
+    size_t bagSize = (bag).size;
+
+    for (register size_t i = 0; i < bagSize; ++i) {
+        for (register size_t j = 0; j < bagSize; ++j) {
+            if (i != j && word_cmp((bag).words[i], (bag).words[j]) == 0) {
+                return 1;
+            }
+        }
+    }
+
+    return 0;
+}
+
+void test_task14_default_case() {
+    char testString1[] = "hello world olleh";
+
+    assert(is_word_contains_same_letters_words_pair(testString1) == 1);
+}
+
+void test_task14_without_same_words() {
+    char testString1[] = "hello world";
+
+    assert(is_word_contains_same_letters_words_pair(testString1) == 0);
+}
+
+void test_task14_without_empty_string() {
+    char testString1[] = "     ";
+
+    assert(is_word_contains_same_letters_words_pair(testString1) == 0);
+}
+
+void task14() {
+//    test_task14_default_case();
+//    test_task14_without_same_words();
+//    test_task14_without_empty_string();
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -887,7 +911,7 @@ void add_words_to_less_string_(bagOfWords_t *greaterString, bagOfWords_t *lessSt
     size_t difference = (greaterString)->size - (lessString)->size;
     char *endOfLessString = (lessString)->words[(lessString)->size - 1].end;
     *endOfLessString = ' ';
-    *endOfLessString++;
+    endOfLessString++;
     char *endOfGreaterString = (greaterString)->words[(greaterString)->size - 1].end;
 
     size_t wordNum = (greaterString)->size - 1;
