@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "Z:/course_/libs/data_structures/string_t/str_lib/string.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string_t/str_lib/string.c.obj"
   "Z:/course_/libs/data_structures/string_t/tasks/tasks_and_tests.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj"
   "Z:/course_/libs/data_structures/string_t/test/test_string.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.obj"
+  "Z:/course_/libs/data_structures/string_t/test/test_task_string.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj"
   "Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj"
   "Z:/course_/libs/data_structures/vector/test_vector/vector_test.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj"
   "Z:/course_/libs/data_structures/vector/vector_t/vector.c" "Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj"

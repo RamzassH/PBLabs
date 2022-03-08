@@ -35,6 +35,11 @@ libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.
  ../libs/data_structures/string_t/str_lib/string.h \
  ../libs/data_structures/string_t/test/test_string.c \
  ../libs/data_structures/string_t/test/test_string.h
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj: \
+ ../libs/data_structures/string_t/str_lib/string.h \
+ ../libs/data_structures/string_t/tasks/task_manager.h \
+ ../libs/data_structures/string_t/test/test_task_string.c \
+ ../libs/data_structures/string_t/test/test_task_string.h
 libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/unordered_array_set/unordered_array_set.c \

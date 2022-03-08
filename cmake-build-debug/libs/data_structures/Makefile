@@ -345,6 +345,30 @@ string_t/test/test_string.c.s:
 	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.s
 .PHONY : string_t/test/test_string.c.s
 
+string_t/test/test_task_string.obj: string_t/test/test_task_string.c.obj
+.PHONY : string_t/test/test_task_string.obj
+
+# target to build an object file
+string_t/test/test_task_string.c.obj:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj
+.PHONY : string_t/test/test_task_string.c.obj
+
+string_t/test/test_task_string.i: string_t/test/test_task_string.c.i
+.PHONY : string_t/test/test_task_string.i
+
+# target to preprocess a source file
+string_t/test/test_task_string.c.i:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.i
+.PHONY : string_t/test/test_task_string.c.i
+
+string_t/test/test_task_string.s: string_t/test/test_task_string.c.s
+.PHONY : string_t/test/test_task_string.s
+
+# target to generate assembly for a file
+string_t/test/test_task_string.c.s:
+	cd /d Z:\course_\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.s
+.PHONY : string_t/test/test_task_string.c.s
+
 unordered_array_set/unordered_array_set.obj: unordered_array_set/unordered_array_set.c.obj
 .PHONY : unordered_array_set/unordered_array_set.obj
 
@@ -477,6 +501,9 @@ help:
 	@echo ... string_t/test/test_string.obj
 	@echo ... string_t/test/test_string.i
 	@echo ... string_t/test/test_string.s
+	@echo ... string_t/test/test_task_string.obj
+	@echo ... string_t/test/test_task_string.i
+	@echo ... string_t/test/test_task_string.s
 	@echo ... unordered_array_set/unordered_array_set.obj
 	@echo ... unordered_array_set/unordered_array_set.i
 	@echo ... unordered_array_set/unordered_array_set.s

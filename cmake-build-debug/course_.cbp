@@ -199,10 +199,6 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/str_lib/string.h">
 			<Option target="course_"/>
-			<Option target="data_structures"/>
-		</Unit>
-		<Unit filename="Z:/course_/libs/data_structures/string_t/tasks/task_manager.h">
-			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/tasks/tasks_and_tests.c">
 			<Option target="data_structures"/>
@@ -213,6 +209,11 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/test/test_string.h">
 			<Option target="course_"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/string_t/test/test_task_string.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/data_structures/string_t/test/test_task_string.h">
 			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.c">

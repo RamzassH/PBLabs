@@ -234,6 +234,19 @@ libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tes
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.s"
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\string_t\tasks\tasks_and_tests.c -o CMakeFiles\data_structures.dir\string_t\tasks\tasks_and_tests.c.s
 
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj: libs/data_structures/CMakeFiles/data_structures.dir/flags.make
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj: ../libs/data_structures/string_t/test/test_task_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\data_structures.dir\string_t\test\test_task_string.c.obj -c Z:\course_\libs\data_structures\string_t\test\test_task_string.c
+
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.i"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\data_structures\string_t\test\test_task_string.c > CMakeFiles\data_structures.dir\string_t\test\test_task_string.c.i
+
+libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.s"
+	cd /d Z:\course_\cmake-build-debug\libs\data_structures && Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\string_t\test\test_task_string.c -o CMakeFiles\data_structures.dir\string_t\test\test_task_string.c.s
+
 # Object files for target data_structures
 data_structures_OBJECTS = \
 "CMakeFiles/data_structures.dir/bitset/bitset.c.obj" \
@@ -248,7 +261,8 @@ data_structures_OBJECTS = \
 "CMakeFiles/data_structures.dir/matrix/task_matrix/test_task/test_task.c.obj" \
 "CMakeFiles/data_structures.dir/string_t/str_lib/string.c.obj" \
 "CMakeFiles/data_structures.dir/string_t/test/test_string.c.obj" \
-"CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj"
+"CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj" \
+"CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj"
 
 # External object files for target data_structures
 data_structures_EXTERNAL_OBJECTS =
@@ -266,9 +280,10 @@ libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/string_t/str_lib/string.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_string.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj
+libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/build.make
 libs/data_structures/libdata_structures.a: libs/data_structures/CMakeFiles/data_structures.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C static library libdata_structures.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C static library libdata_structures.a"
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && $(CMAKE_COMMAND) -P CMakeFiles\data_structures.dir\cmake_clean_target.cmake
 	cd /d Z:\course_\cmake-build-debug\libs\data_structures && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\data_structures.dir\link.txt --verbose=$(VERBOSE)
 

@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/data_structures.dir/string_t/str_lib/string.c.obj"
   "CMakeFiles/data_structures.dir/string_t/tasks/tasks_and_tests.c.obj"
   "CMakeFiles/data_structures.dir/string_t/test/test_string.c.obj"
+  "CMakeFiles/data_structures.dir/string_t/test/test_task_string.c.obj"
   "CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj"
   "CMakeFiles/data_structures.dir/vector/test_vector/vector_test.c.obj"
   "CMakeFiles/data_structures.dir/vector/vector_t/vector.c.obj"
