@@ -432,10 +432,12 @@ int is_palindromic_word(word_descriptor_t w)
 {
     char *leftPos = w.begin;
     char *rightPos = w.end - 1;
-    for (; leftPos - rightPos > 0; ++leftPos, ++rightPos) {
+    while (rightPos - leftPos > 0) {
         if (*leftPos != *rightPos) {
             return 0;
         }
+        ++leftPos;
+        --rightPos;
     }
 
     return 1;
@@ -780,11 +782,103 @@ void task15() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void task16();
+word_descriptor_t last_of_first_in_second_search(char *s1, char *s2) {
+    bagOfWords_t bag1;
+    get_bag_of_words(&bag1, s1);
+
+    bagOfWords_t bag2;
+    get_bag_of_words(&bag2, s2);
+
+    word_descriptor_t word;
+    for (register size_t i = 0; i < (bag1).size; ++i) {
+        for (register size_t J = 0; J < (bag2).size; ++J) {
+            if (strcmp((bag1).words[i].begin, (bag2).words[i].begin) == 0) {
+                (word).begin = (bag1).words[i].begin, (word).end = (bag1).words[i].end;
+            }
+        }
+    }
+    return word;
+}
+
+void test_task16_last_of_first_in_second_default_case() {
+    char testString1[] = "hello world";
+    char testString2[] = "hello world";
+
+    word_descriptor_t res = last_of_first_in_second(testString1, testString2);
+    char result[5];
+    word_descriptor_to_string(res, result);
+
+    char expected_string[] = "world";
+    ASSERT_STRING(expected_string, result);
+}
+
+void test_task16_last_of_first_in_second_not_same_strings() {
+    char testString1[] = "hello world";
+    char testString2[] = "hola world";
+
+    word_descriptor_t res = last_of_first_in_second(testString1, testString2);
+    char result[5];
+    word_descriptor_to_string(res, result);
+
+    char expected_string[] = "world";
+    ASSERT_STRING(expected_string, result);
+}
+
+void task16() {
+    test_task16_last_of_first_in_second_default_case();
+    test_task16_last_of_first_in_second_not_same_strings();
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void task17();
+int is_non_palindromic(word_descriptor_t word) {
+    return is_palindromic_word(word);
+}
+
+void delete_palindromic_words(char *s) {
+    bagOfWords_t bag;
+    get_bag_of_words(&bag, s);
+
+    char *beginCopyPtr = s;
+    word_descriptor_t word;
+    get_word(beginCopyPtr, &word);
+
+    while ((bag).size--) {
+
+        if (!is_palindromic_word(word)) {
+            beginCopyPtr = copy((word).begin, (word).end, beginCopyPtr);
+            *beginCopyPtr = ' ';
+            ++beginCopyPtr;
+        }
+
+        get_word((word).end, &word);
+    }
+    *(beginCopyPtr - 1) = '\0';
+}
+
+void test_task17_default_case() {
+    char testString1[] = "hello abcba world rar";
+    char expectedString[] = "hello world";
+
+    delete_palindromic_words(testString1);
+
+    ASSERT_STRING(expectedString, testString1);
+};
+
+void test_task17_without_palindromic() {
+    char testString1[] = "hello world";
+    char expectedString[] = "hello world";
+
+    delete_palindromic_words(testString1);
+
+    ASSERT_STRING(expectedString, testString1);
+}
+
+
+void task17() {
+    test_task17_default_case();
+    test_task17_without_palindromic();
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

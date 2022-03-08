@@ -23,6 +23,8 @@ int main() {
     task12();
     task13();
     task15();
+    task16();
+    task17();
     task18();
     task19();
 }
