@@ -104,8 +104,54 @@ void comb_sort(int *array, size_t n) {
             }
         }
     }
+
+    printf("\ncomb_sort comparison count = %lld \n", countComparison);
 }
 
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
+/// сортировка выбором
+/// \param array - сортируемый массив
+/// \param n - размер массива
+void selection_sort(int *array, size_t n) {
+    size_t min;
+    size_t countComparison = 0;
+    for (register size_t i = 0; i < n; ++i) {
+        min = i;
+
+        for (register size_t j = i + 1; j < n; ++j) {
+            ++countComparison;
+            if (array[j] < array[min]) {
+                min = j;
+            }
+        }
+        swap(&array[i], &array[min]);
+    }
+    printf("\ncomb_sort comparison count = %lld \n", countComparison);
+}
+
+void dual_sort(int);
+
+//<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+void insertion_sort(int *array, size_t n) {
+    int newElement, location;
+
+    size_t countComparison = 0;
+
+    for (register size_t i = 1; i < n; ++i) {
+        ++countComparison;
+        newElement = array[i];
+        location = i - 1;
+
+        while (location  >= 0 && array[location] > newElement) {
+            ++countComparison;
+            array[location + 1] = array[location];
+            location = location - 1;
+        }
+        array[location + 1] = newElement;
+    }
+
+    printf("\ninsertion_sort comparison count = %lld \n", countComparison);
+}
 
