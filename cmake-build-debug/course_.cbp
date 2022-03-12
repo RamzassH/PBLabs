@@ -5,7 +5,7 @@
 		<Option title="course_"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\libs\experiments_and_measurements\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="Z:/course_/cmake-build-debug"/>
@@ -145,6 +145,42 @@
 					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="experiments_and_measurements">
+				<Option output="Z:/course_/cmake-build-debug/libs/experiments_and_measurements/libexperiments_and_measurements.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug/libs/experiments_and_measurements"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 experiments_and_measurements"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="experiments_and_measurements/fast">
+				<Option output="Z:/course_/cmake-build-debug/libs/experiments_and_measurements/libexperiments_and_measurements.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="Z:/course_/cmake-build-debug/libs/experiments_and_measurements"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="Z:/CLionJetBrains/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 experiments_and_measurements/fast"/>
+					<CompileFile command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="Z:/CLionJetBrains/mingw64/bin/mingw32-make.exe -f &quot;Z:/course_/cmake-build-debug/libs/experiments_and_measurements/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="Z:/course_/libs/algorithms/array/array.c">
 			<Option target="algorithms"/>
@@ -252,6 +288,28 @@
 			<Option target="data_structures"/>
 			<Option target="algorithms"/>
 		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/big_O/big_O.c">
+			<Option target="course_"/>
+			<Option target="experiments_and_measurements"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/big_O/big_O.h">
+			<Option target="course_"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/random_generation_functions">
+			<Option target="experiments_and_measurements"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c">
+			<Option target="course_"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h">
+			<Option target="course_"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/sort_functions/sort_functions.c">
+			<Option target="experiments_and_measurements"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/sort_functions/sort_functions.h">
+			<Option target="experiments_and_measurements"/>
+		</Unit>
 		<Unit filename="Z:/course_/main.c">
 			<Option target="course_"/>
 		</Unit>
@@ -266,6 +324,9 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\algorithms\"/>
+		</Unit>
+		<Unit filename="Z:/course_/libs/experiments_and_measurements/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\experiments_and_measurements\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

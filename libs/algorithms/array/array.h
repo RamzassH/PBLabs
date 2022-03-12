@@ -9,6 +9,10 @@ void inputArray_(int *a, size_t n);
 // вывод массива a размера n
 void outputArray_(const int *a, size_t n);
 
+// возвращает значение 'истина', если массив является
+// отсортированным по неубыванию, иначе - 'ложь'
+int is_ordered(const int *a, size_t n);
+
 // возвращает значение первого вхождения элемента x
 // в массиве a размера n при его наличии, иначе - n
 size_t linearSearch_(const int *a, const size_t n, int x);

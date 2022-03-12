@@ -6,7 +6,8 @@
 #include "libs/data_structures/string_t/test/test_string.h"
 #include "libs/data_structures/string_t/tasks/task_manager.h"
 #include "libs/data_structures/string_t/test/test_task_string.h"
+#include "libs/experiments_and_measurements/big_O/big_O.h"
 
 int main() {
-    test_task();
+    timeMeasure();
 }

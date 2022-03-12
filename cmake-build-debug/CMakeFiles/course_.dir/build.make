@@ -169,6 +169,32 @@ CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_task_string.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_task_string.c.s"
 	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\data_structures\string_t\test\test_task_string.c -o CMakeFiles\course_.dir\libs\data_structures\string_t\test\test_task_string.c.s
 
+CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj: CMakeFiles/course_.dir/flags.make
+CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj: ../libs/experiments_and_measurements/big_O/big_O.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj"
+	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\course_.dir\libs\experiments_and_measurements\big_O\big_O.c.obj -c Z:\course_\libs\experiments_and_measurements\big_O\big_O.c
+
+CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.i"
+	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\experiments_and_measurements\big_O\big_O.c > CMakeFiles\course_.dir\libs\experiments_and_measurements\big_O\big_O.c.i
+
+CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.s"
+	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\experiments_and_measurements\big_O\big_O.c -o CMakeFiles\course_.dir\libs\experiments_and_measurements\big_O\big_O.c.s
+
+CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj: CMakeFiles/course_.dir/flags.make
+CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj: ../libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj"
+	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\course_.dir\libs\experiments_and_measurements\random_generation_functions\random_generation_functions.c.obj -c Z:\course_\libs\experiments_and_measurements\random_generation_functions\random_generation_functions.c
+
+CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.i"
+	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\course_\libs\experiments_and_measurements\random_generation_functions\random_generation_functions.c > CMakeFiles\course_.dir\libs\experiments_and_measurements\random_generation_functions\random_generation_functions.c.i
+
+CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.s"
+	Z:\CLionJetBrains\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\course_\libs\experiments_and_measurements\random_generation_functions\random_generation_functions.c -o CMakeFiles\course_.dir\libs\experiments_and_measurements\random_generation_functions\random_generation_functions.c.s
+
 # Object files for target course_
 course__OBJECTS = \
 "CMakeFiles/course_.dir/main.c.obj" \
@@ -178,7 +204,9 @@ course__OBJECTS = \
 "CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task/task.c.obj" \
 "CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.obj" \
 "CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.obj" \
-"CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_task_string.c.obj"
+"CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_task_string.c.obj" \
+"CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj" \
+"CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj"
 
 # External object files for target course_
 course__EXTERNAL_OBJECTS =
@@ -191,13 +219,15 @@ course_.exe: CMakeFiles/course_.dir/libs/data_structures/matrix/task_matrix/task
 course_.exe: CMakeFiles/course_.dir/libs/data_structures/string_t/str_lib/string.c.obj
 course_.exe: CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_string.c.obj
 course_.exe: CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_task_string.c.obj
+course_.exe: CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj
+course_.exe: CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj
 course_.exe: CMakeFiles/course_.dir/build.make
 course_.exe: libs/data_structures/libdata_structures.a
 course_.exe: libs/algorithms/libalgorithms.a
 course_.exe: CMakeFiles/course_.dir/linklibs.rsp
 course_.exe: CMakeFiles/course_.dir/objects1.rsp
 course_.exe: CMakeFiles/course_.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable course_.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\course_\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable course_.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\course_.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -15,6 +15,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "Z:/course_/libs/data_structures/string_t/test/test_task_string.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/string_t/test/test_task_string.c.obj"
   "Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/vector/test_vector_void/test_vector_void.c.obj"
   "Z:/course_/libs/data_structures/vector/vector_void/vector_void.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/data_structures/vector/vector_void/vector_void.c.obj"
+  "Z:/course_/libs/experiments_and_measurements/big_O/big_O.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj"
+  "Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj"
   "Z:/course_/main.c" "Z:/course_/cmake-build-debug/CMakeFiles/course_.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

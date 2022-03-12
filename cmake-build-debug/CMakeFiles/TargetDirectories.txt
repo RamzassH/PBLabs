@@ -9,3 +9,6 @@ Z:/course_/cmake-build-debug/libs/data_structures/CMakeFiles/rebuild_cache.dir
 Z:/course_/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir
 Z:/course_/cmake-build-debug/libs/algorithms/CMakeFiles/edit_cache.dir
 Z:/course_/cmake-build-debug/libs/algorithms/CMakeFiles/rebuild_cache.dir
+Z:/course_/cmake-build-debug/libs/experiments_and_measurements/CMakeFiles/experiments_and_measurements.dir
+Z:/course_/cmake-build-debug/libs/experiments_and_measurements/CMakeFiles/edit_cache.dir
+Z:/course_/cmake-build-debug/libs/experiments_and_measurements/CMakeFiles/rebuild_cache.dir

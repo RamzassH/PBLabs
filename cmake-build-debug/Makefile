@@ -154,6 +154,19 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+#=============================================================================
+# Target rules for targets named experiments_and_measurements
+
+# Build rule for target.
+experiments_and_measurements: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 experiments_and_measurements
+.PHONY : experiments_and_measurements
+
+# fast build rule for target.
+experiments_and_measurements/fast:
+	$(MAKE) $(MAKESILENT) -f libs\experiments_and_measurements\CMakeFiles\experiments_and_measurements.dir\build.make libs/experiments_and_measurements/CMakeFiles/experiments_and_measurements.dir/build
+.PHONY : experiments_and_measurements/fast
+
 libs/data_structures/matrix/matrix_t/matrix.obj: libs/data_structures/matrix/matrix_t/matrix.c.obj
 .PHONY : libs/data_structures/matrix/matrix_t/matrix.obj
 
@@ -322,6 +335,54 @@ libs/data_structures/vector/vector_void/vector_void.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/data_structures/vector/vector_void/vector_void.c.s
 .PHONY : libs/data_structures/vector/vector_void/vector_void.c.s
 
+libs/experiments_and_measurements/big_O/big_O.obj: libs/experiments_and_measurements/big_O/big_O.c.obj
+.PHONY : libs/experiments_and_measurements/big_O/big_O.obj
+
+# target to build an object file
+libs/experiments_and_measurements/big_O/big_O.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj
+.PHONY : libs/experiments_and_measurements/big_O/big_O.c.obj
+
+libs/experiments_and_measurements/big_O/big_O.i: libs/experiments_and_measurements/big_O/big_O.c.i
+.PHONY : libs/experiments_and_measurements/big_O/big_O.i
+
+# target to preprocess a source file
+libs/experiments_and_measurements/big_O/big_O.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.i
+.PHONY : libs/experiments_and_measurements/big_O/big_O.c.i
+
+libs/experiments_and_measurements/big_O/big_O.s: libs/experiments_and_measurements/big_O/big_O.c.s
+.PHONY : libs/experiments_and_measurements/big_O/big_O.s
+
+# target to generate assembly for a file
+libs/experiments_and_measurements/big_O/big_O.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.s
+.PHONY : libs/experiments_and_measurements/big_O/big_O.c.s
+
+libs/experiments_and_measurements/random_generation_functions/random_generation_functions.obj: libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj
+.PHONY : libs/experiments_and_measurements/random_generation_functions/random_generation_functions.obj
+
+# target to build an object file
+libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj
+.PHONY : libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj
+
+libs/experiments_and_measurements/random_generation_functions/random_generation_functions.i: libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.i
+.PHONY : libs/experiments_and_measurements/random_generation_functions/random_generation_functions.i
+
+# target to preprocess a source file
+libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.i
+.PHONY : libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.i
+
+libs/experiments_and_measurements/random_generation_functions/random_generation_functions.s: libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.s
+.PHONY : libs/experiments_and_measurements/random_generation_functions/random_generation_functions.s
+
+# target to generate assembly for a file
+libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course_.dir\build.make CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.s
+.PHONY : libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -357,6 +418,7 @@ help:
 	@echo ... algorithms
 	@echo ... course_
 	@echo ... data_structures
+	@echo ... experiments_and_measurements
 	@echo ... libs/data_structures/matrix/matrix_t/matrix.obj
 	@echo ... libs/data_structures/matrix/matrix_t/matrix.i
 	@echo ... libs/data_structures/matrix/matrix_t/matrix.s
@@ -378,6 +440,12 @@ help:
 	@echo ... libs/data_structures/vector/vector_void/vector_void.obj
 	@echo ... libs/data_structures/vector/vector_void/vector_void.i
 	@echo ... libs/data_structures/vector/vector_void/vector_void.s
+	@echo ... libs/experiments_and_measurements/big_O/big_O.obj
+	@echo ... libs/experiments_and_measurements/big_O/big_O.i
+	@echo ... libs/experiments_and_measurements/big_O/big_O.s
+	@echo ... libs/experiments_and_measurements/random_generation_functions/random_generation_functions.obj
+	@echo ... libs/experiments_and_measurements/random_generation_functions/random_generation_functions.i
+	@echo ... libs/experiments_and_measurements/random_generation_functions/random_generation_functions.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

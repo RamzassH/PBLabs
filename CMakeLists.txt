@@ -15,7 +15,7 @@ add_executable(course_ main.c libs/data_structures/vector/vector_void/vector_voi
         libs/data_structures/string_t/test/test_string.c
         libs/data_structures/string_t/test/test_string.h
         libs/data_structures/string_t/test/test_task_string.c
-        libs/data_structures/string_t/test/test_task_string.h)
+        libs/data_structures/string_t/test/test_task_string.h libs/experiments_and_measurements/big_O/big_O.c libs/experiments_and_measurements/big_O/big_O.h libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h)
 
 add_subdirectory(libs)
 

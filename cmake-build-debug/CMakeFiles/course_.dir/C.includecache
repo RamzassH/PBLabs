@@ -56,6 +56,10 @@ Z:/course_/libs/data_structures/string_t/str_lib/string.h
 
 Z:/course_/libs/data_structures/string_t/test/test_string.h
 
+Z:/course_/libs/data_structures/string_t/test/test_task_string.h
+../tasks/task_manager.h
+Z:/course_/libs/data_structures/string_t/tasks/task_manager.h
+
 Z:/course_/libs/data_structures/vector/test_vector/vector_test.h
 assert.h
 -
@@ -84,6 +88,20 @@ Z:/course_/libs/data_structures/vector/vector_t/vector.h
 string.h
 -
 
+Z:/course_/libs/experiments_and_measurements/big_O/big_O.c
+big_O.h
+Z:/course_/libs/experiments_and_measurements/big_O/big_O.h
+
+Z:/course_/libs/experiments_and_measurements/big_O/big_O.h
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+time.h
+-
+
 Z:/course_/main.c
 libs/data_structures/vector/test_vector/vector_test.h
 Z:/course_/libs/data_structures/vector/test_vector/vector_test.h
@@ -99,4 +117,8 @@ libs/data_structures/string_t/test/test_string.h
 Z:/course_/libs/data_structures/string_t/test/test_string.h
 libs/data_structures/string_t/tasks/task_manager.h
 Z:/course_/libs/data_structures/string_t/tasks/task_manager.h
+libs/data_structures/string_t/test/test_task_string.h
+Z:/course_/libs/data_structures/string_t/test/test_task_string.h
+libs/experiments_and_measurements/big_O/big_O.h
+Z:/course_/libs/experiments_and_measurements/big_O/big_O.h
 
