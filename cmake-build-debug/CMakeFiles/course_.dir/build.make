@@ -224,6 +224,7 @@ course_.exe: CMakeFiles/course_.dir/libs/experiments_and_measurements/random_gen
 course_.exe: CMakeFiles/course_.dir/build.make
 course_.exe: libs/data_structures/libdata_structures.a
 course_.exe: libs/algorithms/libalgorithms.a
+course_.exe: libs/experiments_and_measurements/libexperiments_and_measurements.a
 course_.exe: CMakeFiles/course_.dir/linklibs.rsp
 course_.exe: CMakeFiles/course_.dir/objects1.rsp
 course_.exe: CMakeFiles/course_.dir/link.txt

@@ -107,6 +107,7 @@ void selection_sort(int *array, size_t n) {
     size_t min;
     size_t countComparison = 0;
     for (register size_t i = 0; i < n; ++i) {
+        ++countComparison;
         min = i;
 
         for (register size_t j = i + 1; j < n; ++j) {
@@ -115,6 +116,7 @@ void selection_sort(int *array, size_t n) {
                 min = j;
             }
         }
+
         swap(&array[i], &array[min]);
     }
     printf("\ncomb_sort comparison count = %lld \n", countComparison);
@@ -164,6 +166,9 @@ void bingo_sort(int *array, size_t n) {
 }
 
 void pancake_sort(int *array, size_t n) {
+
+    size_t countComparison;
+
     // если длинна массива меньше 2, то сортировка не потребуется
     if (n < 2) {
         return;
@@ -172,21 +177,27 @@ void pancake_sort(int *array, size_t n) {
     int i;
     int maxNumPos;
     for (i = (int)n; i > 1; --i) {
+        ++countComparison;
         maxNumPos = 0;
         for (register size_t j = 0; j < i; ++j) {
+            ++countComparison;
             if (array[j] > array[maxNumPos]) {
                 maxNumPos = j;
             }
         }
 
+        ++countComparison;
         if (maxNumPos == i - 1) {
             continue;
         }
 
+        ++countComparison;
         if (maxNumPos >= 0) {
             flip(array, maxNumPos, i);
         }
     }
+
+    printf("\npancake_sort comparison count = %lld \n", countComparison);
 }
 
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
@@ -216,11 +227,13 @@ void insertion_binary_sort(int * array, size_t n) {
     size_t countComparison = 0;
 
     for (register int i = 0; i < n; ++i) {
+        ++countComparison;
         int key = array[i];
         int left = 0;
         int right = i;
 
         while (right - left > 0) {
+            ++countComparison;
             int mid = left + (right - left) / 2;
 
             ++countComparison;
