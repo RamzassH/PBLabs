@@ -301,19 +301,20 @@ void tree_to_array(tree_t *root, int *a,  size_t *countComparison) {
     free(root);
 }
 
-void tree_sort(int *array, size_t n) {
+void tree_sort(int *a, size_t n) {
     tree_t *root;
     root = NULL;
     size_t countComparison = 0;
     for (int i = 0; i < n; ++i) {
         ++countComparison;
-        root = add_to_tree(root, array[i], &countComparison);
+        root = add_to_tree(root, a[i], &countComparison);
     }
 
-    tree_to_array(root, array, &countComparison);
+    tree_to_array(root, a, &countComparison);
 
     printf("\ntree_sort comparison count = %lld \n", countComparison);
 }
+
 
 
 

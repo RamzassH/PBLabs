@@ -29,21 +29,16 @@ CMakeFiles/course_.dir/libs/data_structures/vector/vector_void/vector_void.c.obj
  Z:/course_/libs/data_structures/vector/vector_void/vector_void.c
  Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
 CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj
+ Z:/course_/libs/algorithms/array/array.h
  Z:/course_/libs/experiments_and_measurements/big_O/big_O.c
  Z:/course_/libs/experiments_and_measurements/big_O/big_O.h
+ Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h
+CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj
+ Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c
+ Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h
 CMakeFiles/course_.dir/main.c.obj
  Z:/course_/libs/algorithms/array/array.h
- Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
- Z:/course_/libs/data_structures/matrix/task_matrix/task/task.h
- Z:/course_/libs/data_structures/matrix/task_matrix/test_task/test_task.h
- Z:/course_/libs/data_structures/matrix/test_matrix/test_matrix.h
- Z:/course_/libs/data_structures/string_t/str_lib/string.h
- Z:/course_/libs/data_structures/string_t/tasks/task_manager.h
- Z:/course_/libs/data_structures/string_t/test/test_string.h
- Z:/course_/libs/data_structures/string_t/test/test_task_string.h
- Z:/course_/libs/data_structures/vector/test_vector/vector_test.h
- Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h
- Z:/course_/libs/data_structures/vector/vector_t/vector.h
- Z:/course_/libs/data_structures/vector/vector_void/vector_void.h
  Z:/course_/libs/experiments_and_measurements/big_O/big_O.h
+ Z:/course_/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h
+ Z:/course_/libs/experiments_and_measurements/sort_functions/sort_functions.h
  Z:/course_/main.c

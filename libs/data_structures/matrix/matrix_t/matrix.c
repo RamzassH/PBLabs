@@ -208,7 +208,7 @@ void output_matrices(matrix_t *(ms), int nMatrices) {
     }
 }
 
-void swap(int *a, int *b) {
+void matrix_swap(int *a, int *b) {
     int t = *a;
     *a = *b;
     *b = t;
@@ -221,7 +221,7 @@ void swap_rows(matrix_t (m), int i1, int i2) {
         fprintf(stderr, "rows is not exists");
     }
 
-    swap((int*) &((m).values[i1]), (int *) &((m).values[i2]));
+    matrix_swap((int*) &((m).values[i1]), (int *) &((m).values[i2]));
 }
 
 void swap_columns(matrix_t (m), int j1, int j2) {
@@ -234,7 +234,7 @@ void swap_columns(matrix_t (m), int j1, int j2) {
     }
 
     for (register size_t i = 0; i < (m).nRows; ++i) {
-        swap(&(m).values[i][j1], &(m).values[i][j2]);
+        matrix_swap(&(m).values[i][j1], &(m).values[i][j2]);
     }
 }
 
@@ -248,7 +248,7 @@ void transpose_square_matrix(matrix_t (m)) {
 
     for (register size_t i = 0; i < (m).nRows; ++i) {
         for (register size_t j = 1; j < (m).nCols; ++j) {
-            swap(&(m).values[i][j], &(m).values[j][i]);
+            matrix_swap(&(m).values[i][j], &(m).values[j][i]);
         }
     }
 }

@@ -200,7 +200,6 @@
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h">
-			<Option target="course_"/>
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/matrix/task_matrix/task/task.c">
@@ -235,6 +234,7 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/str_lib/string.h">
 			<Option target="course_"/>
+			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/tasks/tasks_and_tests.c">
 			<Option target="data_structures"/>
@@ -245,6 +245,7 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/test/test_string.h">
 			<Option target="course_"/>
+			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/test/test_task_string.c">
 			<Option target="course_"/>
@@ -252,6 +253,7 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/string_t/test/test_task_string.h">
 			<Option target="course_"/>
+			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/unordered_array_set/unordered_array_set.c">
 			<Option target="data_structures"/>
@@ -271,6 +273,7 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/vector/test_vector_void/test_vector_void.h">
 			<Option target="course_"/>
+			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/data_structures/vector/vector_t/vector.c">
 			<Option target="data_structures"/>
@@ -294,6 +297,7 @@
 		</Unit>
 		<Unit filename="Z:/course_/libs/experiments_and_measurements/big_O/big_O.h">
 			<Option target="course_"/>
+			<Option target="experiments_and_measurements"/>
 		</Unit>
 		<Unit filename="Z:/course_/libs/experiments_and_measurements/random_generation_functions">
 			<Option target="experiments_and_measurements"/>
