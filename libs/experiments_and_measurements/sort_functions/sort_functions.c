@@ -1,4 +1,5 @@
 #include "sort_functions.h"
+#include "string.h"
 
 #define RFACTOR 1.24733
 
@@ -319,5 +320,71 @@ void inorder(struct btreenode *sr, int **array) {
     }
 }
 
+//<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
+static void getPrefixSums(int *a, size_t n) {
+    int prev = a[0];
+    *a = 0;
+    for (int i = 1; i < n; i++) {
+        int t = a[i];
+        a[i] = prev + a[i - 1];
+        prev = t;
+    }
+}
+
+void radix_sort(int *a, size_t n) {
+    int *buffer = (int *) calloc(n, sizeof(int));
+
+    const int STEP = 8;
+    const int MASK = 0b11111111;
+
+    for (int byte = 0; byte < sizeof(int); byte++) {
+        int values[UCHAR_MAX + 1] = {0};
+
+        for (size_t i = 0; i < n; i++) {
+            int curByte;
+            if (byte + 1 == sizeof(int)) {
+                curByte = ((a[i] >> (byte * STEP)) + CHAR_MAX + 1) & MASK;
+            } else {
+                curByte = (a[i] >> (byte * STEP)) & MASK;
+            }
+
+            values[curByte]++;
+        }
+
+        getPrefixSums(values, UCHAR_MAX + 1);
+
+        for (size_t i = 0; i < n; i++) {
+            int curByte;
+            if (byte + 1 == sizeof(int)) {
+                curByte = ((a[i] >> (byte * STEP)) + CHAR_MAX + 1) & MASK;
+            } else {
+                curByte = (a[i] >> (byte * STEP)) & MASK;
+            }
+
+            buffer[values[curByte]++] = a[i];
+        }
+
+        memcpy(a, buffer, sizeof(int) * n);
+    }
+
+    free(buffer);
+}
+
+int cmp_int(const void *a, const void *b) {
+    int arg1 = *(int *) a;
+    int arg2 = *(int *) b;
+    if (arg1 < arg2) {
+        return -1;
+    }
+    if (arg1 > arg2) {
+        return 1;
+    }
+
+    return 0;
+}
+
+void qsort_int(int *a, size_t n) {
+    qsort(a, n, sizeof(int), cmp_int);
+}
 

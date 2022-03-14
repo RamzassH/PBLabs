@@ -6,7 +6,7 @@ void check_time(void(*sort_functions_t) (int *, size_t),
 
     static size_t runCounter = 1;
 
-    static int innerBuffer[100000];
+    static int innerBuffer[100000000];
     generating_functions_t(innerBuffer, size);
 
     printf("Run #%zu | ", runCounter);
@@ -47,12 +47,14 @@ void time_measure() {
 //            {shaker_sort, "shaker sort"} ,
 //            {comb_sort, "comb sort"} ,
 //            {selection_sort, "selection sort"} ,
-            {bingo_sort, "bingo sort"} ,
+//            {bingo_sort, "bingo sort"} ,
 //            {pancake_sort, "pancake sort"} ,
 //            {insertion_sort, "insertion sort"} ,
 //            {insertion_binary_sort, "insertion binary sort"} ,
-//            {shell_sort, "shell sort"} ,
+            {shell_sort, "shell sort"} ,
 //            {tree_sort, "tree_sort"}
+//            {radix_sort, "radix sort"},
+//            {qsort_int, "qsort"}
     };
 
     const unsigned nFunctions = ARRAY_SIZE(sorts);
@@ -60,12 +62,12 @@ void time_measure() {
     generating_functions_t genFunctions[] = {
             {generate_random_sequence, "random_array"},
             //{generate_ordered_sequence, "ordered_array"},
-            //{generate_ordered_backward, "ordered_backwards"}
+            {generate_ordered_backward, "ordered_backwards"}
     };
 
     const unsigned CASES_N = ARRAY_SIZE(genFunctions);
 
-    for (size_t size = 10000; size <= 100000; size += 10000) {
+    for (size_t size = 10000000; size <= 100000000; size += 10000000) {
         printf("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n");
         printf("Size: %lld\n", size);
         for (int i = 0; i < nFunctions; ++i) {
