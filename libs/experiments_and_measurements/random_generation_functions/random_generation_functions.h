@@ -18,7 +18,7 @@ void generate_ordered_sequence(int *array, size_t n);
 /// генерирует упорядоченную по убыванию последовательность из n символов
 /// \param array - массив в который будет записана последовательность
 /// \param n - количество элементов в последовательности
-void generate_ordered_backward(int *array, int n);
+void generate_ordered_backward(int *array, size_t n);
 
 
 #endif

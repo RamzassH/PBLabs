@@ -8,9 +8,8 @@ void swap(int *a, int *b) {
     *b = tmp;
 }
 
-void flip(int *a, int m, int n)
-{
-    for(register int i = m; i < --n; i++) {
+void flip(int *a, int m, int n) {
+    for (register int i = m; i < --n; i++) {
         int tmp = a[i];
         a[i] = a[n];
         a[n] = tmp;
@@ -37,7 +36,7 @@ void bubble_sort(int *array, size_t n) {
     for (register size_t i = 0; i < n - 1; ++i) {
         for (register size_t j = (n - 1); j > i; --j) {
             ++countComparison;
-            if (array[j - 1] < array[j]) {
+            if (array[j - 1] > array[j]) {
                 swap(&array[j - 1], &array[j]);
             }
         }
@@ -47,7 +46,7 @@ void bubble_sort(int *array, size_t n) {
 
 void shaker_sort(int *array, size_t n) {
     int leftPos = 0;
-    int rightPos = (int)n - 1;
+    int rightPos = (int) n - 1;
     int flag = 1;
     size_t countComparison = 0;
     while ((rightPos - leftPos > 0) && (flag > 0)) {
@@ -80,7 +79,7 @@ void comb_sort(int *array, size_t n) {
     size_t j;
     size_t countComparison = 0;
     while (gap > 1 || isSwaped) {
-        gap = (size_t) ((double)gap / RFACTOR);
+        gap = (size_t) ((double) gap / RFACTOR);
 
         ++countComparison;
         if (gap < 1) {
@@ -91,7 +90,7 @@ void comb_sort(int *array, size_t n) {
         for (register size_t i = 0; i < n - gap; ++i) {
             j = i + gap;
             ++countComparison;
-            if(array[i] > array[j]) {
+            if (array[i] > array[j]) {
                 swap(&array[i], &array[j]);
                 isSwaped = 1;
             }
@@ -123,7 +122,7 @@ void selection_sort(int *array, size_t n) {
 }
 
 void bingo_sort(int *array, size_t n) {
-    int max = (int)n - 1;
+    int max = (int) n - 1;
     int nextValue = array[max];
 
     size_t countComparison = 0;
@@ -167,7 +166,7 @@ void bingo_sort(int *array, size_t n) {
 
 void pancake_sort(int *array, size_t n) {
 
-    size_t countComparison;
+    size_t countComparison = 0;
 
     // если длинна массива меньше 2, то сортировка не потребуется
     if (n < 2) {
@@ -176,7 +175,7 @@ void pancake_sort(int *array, size_t n) {
 
     int i;
     int maxNumPos;
-    for (i = (int)n; i > 1; --i) {
+    for (i = (int) n; i > 1; --i) {
         ++countComparison;
         maxNumPos = 0;
         for (register size_t j = 0; j < i; ++j) {
@@ -210,9 +209,9 @@ void insertion_sort(int *array, size_t n) {
     for (register size_t i = 1; i < n; ++i) {
         ++countComparison;
         newElement = array[i];
-        location = (int)i - 1;
+        location = (int) i - 1;
 
-        while (location  >= 0 && array[location] > newElement) {
+        while (location >= 0 && array[location] > newElement) {
             ++countComparison;
             array[location + 1] = array[location];
             location = location - 1;
@@ -223,7 +222,7 @@ void insertion_sort(int *array, size_t n) {
     printf("\ninsertion_sort comparison count = %lld \n", countComparison);
 }
 
-void insertion_binary_sort(int * array, size_t n) {
+void insertion_binary_sort(int *array, size_t n) {
     size_t countComparison = 0;
 
     for (register int i = 0; i < n; ++i) {
@@ -256,7 +255,7 @@ void insertion_binary_sort(int * array, size_t n) {
 
 void shell_sort(int *array, size_t n) {
     size_t countComparison = 0;
-    int interval = (int)n / 2;
+    int interval = (int) n / 2;
     while (interval > 0) {
         ++countComparison;
         for (register int i = interval; i < n; i++) {
@@ -275,59 +274,50 @@ void shell_sort(int *array, size_t n) {
     printf("\nshell_sort comparison count = %lld \n", countComparison);
 }
 
-typedef struct {
-    int a;              // данные
-    struct tree *left;  // левый дочерний объект
-    struct tree *right; // правый дочерний объект
-}tree_t;
+struct btreenode {
+    int data;
+    struct btreenode *leftchild;
+    struct btreenode *rightchild;
+};
 
-tree_t *add_to_tree(tree_t *root, int newValue, size_t *countComparison) {
-    (*countComparison)++;
-    if (root == NULL) { // если нет дочерних - создаем новый элемент
-        root = (tree_t*) malloc(sizeof(tree_t));
-        (root)->a = newValue;
-        (root)->left = (root)->right = 0;
-        return root;
-    }
+void insert(struct btreenode **, int);
 
-    (*countComparison)++;
-    if ((root)->a < newValue) {             // добавляем новую ветвь
-        (root)->right = add_to_tree((root)->right, newValue, countComparison);
+void inorder(struct btreenode *, int **);
+
+void tree_sort(int *array, int arr_size) {
+    struct btreenode *bt = NULL;
+    int i, *p = array;
+
+    for (i = 0; i < arr_size; i++)
+        insert(&bt, array[i]);
+
+    inorder(bt, &p);
+}
+
+void insert(struct btreenode **sr, int num) {
+    if (*sr == NULL) {
+        *sr = malloc(sizeof(struct btreenode));
+
+        (*sr)->leftchild = NULL;
+        (*sr)->data = num;
+        (*sr)->rightchild = NULL;
     } else {
-        (*countComparison)++;
-        (root)->left = add_to_tree((root)->left, newValue, countComparison);
+        if (num < (*sr)->data) {
+            insert(&((*sr)->leftchild), num);
+        } else {
+            insert(&((*sr)->rightchild), num);
+        }
     }
-
-    return root;
 }
 
-void tree_to_array(tree_t *root, int *a,  size_t *countComparison) {
-    static int max2 = 0;
-    (*countComparison)++;
-    if (root == NULL) {
-        return;
+void inorder(struct btreenode *sr, int **array) {
+    if (sr != NULL) {
+        inorder(sr->leftchild, array);
+        **array = sr->data;
+        ++*array;
+        inorder(sr->rightchild, array);
     }
-
-    tree_to_array((root)->left, a, countComparison);
-    a[max2++] = (root)->a;
-    tree_to_array((root)->right, a, countComparison);
-    free(root);
 }
-
-void tree_sort(int *a, size_t n) {
-    tree_t *root;
-    root = NULL;
-    size_t countComparison = 0;
-    for (int i = 0; i < n; ++i) {
-        ++countComparison;
-        root = add_to_tree(root, a[i], &countComparison);
-    }
-
-    tree_to_array(root, a, &countComparison);
-
-    printf("\ntree_sort comparison count = %lld \n", countComparison);
-}
-
 
 
 

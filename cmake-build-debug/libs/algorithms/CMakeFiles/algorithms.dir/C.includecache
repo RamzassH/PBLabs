@@ -6,27 +6,17 @@
 
 #IncludeRegexTransform: 
 
-Z:/course_/libs/algorithms/array/array.h
-stddef.h
--
-
-Z:/course_/libs/data_structures/matrix/matrix_t/matrix.c
-assert.h
--
-math.h
--
-stdlib.h
--
-matrix.h
-Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
-
-Z:/course_/libs/data_structures/matrix/matrix_t/matrix.h
+Z:/course_/libs/algorithms/array/array.c
 stdio.h
 -
-malloc.h
+limits.h
 -
-stdbool.h
+assert.h
 -
+array.h
 Z:/course_/libs/algorithms/array/array.h
+
+Z:/course_/libs/algorithms/array/array.h
+stddef.h
 -
 

@@ -71,7 +71,7 @@ void shell_sort(int *array, size_t n);
 /// сортировка бинарным деревом
 /// \param array - сортируемый массив
 /// \param n - размер массива
-void tree_sort(int *array, size_t n);
+void tree_sort(int *array, int n);
 
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 #endif

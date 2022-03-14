@@ -7,6 +7,7 @@
 #include <time.h>
 #include "Z:/course_/libs/algorithms/array/array.h"
 #include "../random_generation_functions/random_generation_functions.h"
+#include "../sort_functions/sort_functions.h"
 
 // функция сортировки
 typedef struct{
@@ -37,10 +38,10 @@ typedef struct{
 // определяет размер массива, если он определен в функции
 #define ARRAY_SIZE(a) sizeof(a) / sizeof(a[0])
 
-void checkTime(void(*sort_functions_t) (int *, size_t),
+void check_time(void(*sort_functions_t) (int *, size_t),
                void(*generating_functions_t) (int *, size_t),
                size_t size, char *experimentName);
 
-void timeMeasure();
+void time_measure();
 
 #endif

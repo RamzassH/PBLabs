@@ -32,7 +32,8 @@ CMakeFiles/course_.dir/libs/experiments_and_measurements/big_O/big_O.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/experiments_and_measurements/big_O/big_O.c \
  ../libs/experiments_and_measurements/big_O/big_O.h \
- ../libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h
+ ../libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h \
+ ../libs/experiments_and_measurements/sort_functions/sort_functions.h
 CMakeFiles/course_.dir/libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c.obj: \
  ../libs/experiments_and_measurements/random_generation_functions/random_generation_functions.c \
  ../libs/experiments_and_measurements/random_generation_functions/random_generation_functions.h

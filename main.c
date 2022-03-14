@@ -3,7 +3,10 @@
 
 
 int main() {
-    int a[] = {5, -3, 0, 10, 1, 5};
-    tree_sort(a, 6);
-    outputArray_(a, 6);
+    time_measure();
+
+//    int a[10] = {10, 1, 5, 4, 3, 2, 6, 7, 8, 9};
+//    tree_sort(a, 10);
+//    outputArray_(a, 10);
 }
+

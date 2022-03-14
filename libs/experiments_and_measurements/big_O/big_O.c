@@ -1,16 +1,15 @@
 #include "big_O.h"
 
-
-void checkTime(void(*sort_functions_t) (int *, size_t),
+void check_time(void(*sort_functions_t) (int *, size_t),
                void(*generating_functions_t) (int *, size_t),
                size_t size, char *experimentName) {
 
     static size_t runCounter = 1;
 
-    static int innerBuffer[10000000];
+    static int innerBuffer[100000];
     generating_functions_t(innerBuffer, size);
 
-    printf("Run #%zu | ", runCounter++);
+    printf("Run #%zu | ", runCounter);
     printf("Name: %s\n", experimentName);
 
     double time;
@@ -41,21 +40,32 @@ void checkTime(void(*sort_functions_t) (int *, size_t),
     }
 }
 
-void timeMeasure() {
+void time_measure() {
     sort_functions_t sorts[] = {
+//            {silly_sort, "silly sort"} ,
+//            {bubble_sort, "bubble sort"} ,
+//            {shaker_sort, "shaker sort"} ,
+//            {comb_sort, "comb sort"} ,
+//            {selection_sort, "selection sort"} ,
+            {bingo_sort, "bingo sort"} ,
+//            {pancake_sort, "pancake sort"} ,
+//            {insertion_sort, "insertion sort"} ,
+//            {insertion_binary_sort, "insertion binary sort"} ,
+//            {shell_sort, "shell sort"} ,
+//            {tree_sort, "tree_sort"}
     };
 
     const unsigned nFunctions = ARRAY_SIZE(sorts);
 
     generating_functions_t genFunctions[] = {
-            {generate_random_sequence, "randomArray"},
-            {generate_ordered_sequence, "orderedArray"},
-            {generate_ordered_backward, "orderedBackwards"}
+            {generate_random_sequence, "random_array"},
+            //{generate_ordered_sequence, "ordered_array"},
+            //{generate_ordered_backward, "ordered_backwards"}
     };
 
     const unsigned CASES_N = ARRAY_SIZE(genFunctions);
 
-    for (size_t size = 10000000; size <= 1000000000; size += 10000) {
+    for (size_t size = 10000; size <= 100000; size += 10000) {
         printf("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n");
         printf("Size: %lld\n", size);
         for (int i = 0; i < nFunctions; ++i) {
@@ -65,7 +75,7 @@ void timeMeasure() {
                 sprintf(fileName, "%s_%s_time",
                         sorts[i].name, genFunctions[j].name);
 
-                checkTime(sorts[i].sort,
+                check_time(sorts[i].sort,
                           genFunctions[j].generate,
                           size, fileName);
             }

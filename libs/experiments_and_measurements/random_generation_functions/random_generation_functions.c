@@ -3,7 +3,7 @@
 void generate_random_sequence(int *array, size_t n) {
     srand(time(NULL));
     for (register size_t i = 0; i < n; i++) {
-        array[i] = rand() % 1000000;
+        array[i] = rand() % 100;
     };
 }
 
@@ -13,7 +13,7 @@ void generate_ordered_sequence(int *array, size_t n) {
     }
 }
 
-void generate_ordered_backward(int *array, int n) {
+void generate_ordered_backward(int *array, size_t n) {
     for (register int i = 0; i < n; ++i) {
         array[i] = n - i;
     }
